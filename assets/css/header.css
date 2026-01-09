@@ -1,5 +1,5 @@
 /* /assets/css/header.css */
-/* Doberman Deals header: FIXED pinned header + mobile overlay panel with Close button */
+/* Doberman Deals header: FIXED pinned header + mobile overlay panel with working Close */
 
 :root{
   --dd-black:#000000;
@@ -26,7 +26,7 @@
   height: var(--dd-header-h);
 }
 
-/* Fixed header */
+/* Fixed header (MUST be clickable) */
 header.ddHeader[data-dd-header]{
   position: fixed;
   top: 0;
@@ -35,12 +35,10 @@ header.ddHeader[data-dd-header]{
   z-index: 6000;
 
   padding: 12px 14px 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .ddHeaderInner{
-  pointer-events: auto;
-
   max-width: 1180px;
   margin: 0 auto;
 
@@ -156,24 +154,29 @@ header.ddHeader[data-dd-header]{
   opacity: 0.95;
 }
 
-/* Mobile overlay background */
-.ddMobile{
+/* Mobile overlay */
+header.ddHeader[data-dd-header] .ddMobile{
   position: fixed;
   inset: 0;
   z-index: 6500;
+
+  pointer-events: auto;
 
   background: rgba(0,0,0,0.62);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  /* IMPORTANT: leave room for fixed header so it never feels "trapped" */
+  /* room under fixed header */
   padding: calc(var(--dd-header-h) + 14px) 14px 14px;
 }
 
-.ddMobile[hidden]{ display:none !important; }
+header.ddHeader[data-dd-header] .ddMobile[hidden]{
+  display:none !important;
+}
 
-/* Mobile panel (smaller + scroll inside) */
-.ddMobileLinks{
+/* Mobile panel */
+header.ddHeader[data-dd-header] .ddMobileLinks{
+  width: 100%;
   max-width: 560px;
   margin: 0 auto;
 
@@ -186,13 +189,16 @@ header.ddHeader[data-dd-header]{
   display:grid;
   gap: 10px;
 
-  /* KEY: do not take entire screen */
+  /* Force content-sized panel (prevents full height stretch) */
+  height: auto !important;
+  align-self: start !important;
+
   max-height: calc(100vh - var(--dd-header-h) - 28px);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Injected top bar */
+/* Top row inside panel */
 .ddMobileTop{
   display:flex;
   align-items:center;
@@ -226,8 +232,8 @@ header.ddHeader[data-dd-header]{
 }
 
 .ddMobileClose{
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.06);
@@ -239,9 +245,9 @@ header.ddHeader[data-dd-header]{
   align-items:center;
   justify-content:center;
   cursor: pointer;
+  pointer-events: auto;
 }
 
-/* Mobile links */
 .ddMobileLink{
   display:flex;
   align-items:center;
