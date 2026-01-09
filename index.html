@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Doberman Deals | Monthly Curated Doberman Subscription Box</title>
-  <meta name="description" content="Doberman Deals is a monthly curated box of Doberman gear, toys, treats, and decor. Spoil your Doberman without breaking the bank. Cancel anytime." />
-
+  <meta name="description" content="Doberman Deals is a monthly curated box for Doberman owners. Gear, toys, treats, and home decor. Coming soon. Join the waitlist for launch updates." />
   <link rel="canonical" href="https://dobermandeals.com/" />
   <link rel="alternate" hreflang="en" href="/" />
   <link rel="alternate" hreflang="x-default" href="/" />
-
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Doberman Deals" />
   <meta property="og:title" content="Doberman Deals | Monthly Curated Doberman Subscription Box" />
-  <meta property="og:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Premium picks, real value, cancel anytime." />
+  <meta property="og:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Coming soon. Join the waitlist for launch updates." />
   <meta property="og:url" content="https://dobermandeals.com/" />
   <meta property="og:image" content="https://dobermandeals.com/og-dd.jpg" />
   <meta property="og:image:secure_url" content="https://dobermandeals.com/og-dd.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Doberman Deals - monthly curated subscription box for Doberman owners" />
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Doberman Deals | Monthly Curated Doberman Subscription Box" />
-  <meta name="twitter:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Premium picks, real value, cancel anytime." />
+  <meta name="twitter:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Coming soon. Join the waitlist for launch updates." />
   <meta name="twitter:image" content="https://dobermandeals.com/og-dd.jpg" />
-
   <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -36,261 +31,583 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#000000" />
-
   <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
-
-  <!-- Head-only JS -->
+  <!-- Head-only JS (includes GA) -->
   <script src="/assets/js/head.js" defer></script>
-</head>
+  <style>
+    /* Page-only styles (landing) */
+    :root{
+      --dd-black:#000000;
+      --dd-red:#E63946;
+      --dd-gray:#6C757D;
+      --dd-white:#FFFFFF;
+      --dd-gold:#FFC107;
+      --dd-blue:#1D3557;
 
+      --dd-ink: rgba(255,255,255,0.92);
+      --dd-muted: rgba(255,255,255,0.72);
+      --dd-line: rgba(255,255,255,0.14);
+      --dd-card: rgba(15,15,16,0.82);
+      --dd-card2: rgba(15,15,16,0.92);
+      --dd-shadow: 0 18px 60px rgba(0,0,0,0.55);
+      --dd-shadow2: 0 12px 30px rgba(0,0,0,0.45);
+      --dd-r: 22px;
+    }
+
+    body{
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(230,57,70,0.22), transparent 60%),
+                  radial-gradient(900px 600px at 80% 20%, rgba(255,193,7,0.16), transparent 55%),
+                  radial-gradient(900px 800px at 60% 90%, rgba(29,53,87,0.18), transparent 55%),
+                  #070708;
+      color: var(--dd-ink);
+    }
+
+    .container{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 14px 80px;
+    }
+
+    .page{
+      padding-top: 18px;
+    }
+
+    .cardShell{
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      box-shadow: var(--dd-shadow2);
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    .hero{
+      padding: 18px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.28);
+      box-shadow: var(--dd-shadow2);
+      overflow: hidden;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .heroLeft{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+      min-width: 0;
+    }
+
+    .lockup{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .lockup img{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .lockup span{
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      opacity: 0.95;
+    }
+
+    .pillRow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      margin-top: 2px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.86);
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--dd-gold);
+      box-shadow: 0 0 0 4px rgba(255,193,7,0.14);
+    }
+
+    h1{
+      margin: 0;
+      font-size: 52px;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .sub{
+      margin: 0;
+      color: var(--dd-muted);
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 74ch;
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      margin-top: 6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.92);
+      font-weight: 950;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--dd-shadow2);
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.20); background: rgba(255,255,255,0.08); }
+    .btnPrimary{
+      border-color: rgba(230,57,70,0.35);
+      background: linear-gradient(135deg, rgba(230,57,70,0.95), rgba(255,193,7,0.55));
+      color: rgba(0,0,0,0.90);
+    }
+    .btnPrimary:hover{ background: linear-gradient(135deg, rgba(230,57,70,1), rgba(255,193,7,0.62)); }
+    .btnGhost{
+      background: rgba(0,0,0,0.28);
+    }
+
+    .heroRight{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+      min-width: 0;
+    }
+
+    .videoCard{
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: var(--dd-card);
+      box-shadow: var(--dd-shadow);
+      overflow:hidden;
+    }
+
+    .videoTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 12px 12px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .videoTitle{
+      margin: 0;
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      font-size: 14px;
+      color: rgba(255,255,255,0.90);
+    }
+
+    .badgeSoon{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,193,7,0.26);
+      background: rgba(255,193,7,0.10);
+      color: rgba(255,255,255,0.90);
+      font-weight: 950;
+      font-size: 12.5px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .videoFrame{
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: rgba(0,0,0,0.35);
+    }
+    .videoFrame iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display:block;
+    }
+
+    .section{
+      margin-top: 16px;
+    }
+
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 10px;
+    }
+
+    .h2{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .muted{
+      margin: 0;
+      color: var(--dd-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .card{
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: var(--dd-card);
+      box-shadow: var(--dd-shadow2);
+      padding: 14px;
+      min-width: 0;
+    }
+
+    .cardTitle{
+      margin: 0 0 6px;
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .cardText{
+      margin: 0;
+      color: var(--dd-muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .waitlist{
+      display:grid;
+      gap: 10px;
+    }
+
+    .waitForm{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: end;
+    }
+
+    .field{
+      display:grid;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .fieldLabel{
+      font-weight: 900;
+      font-size: 13px;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .input{
+      width: 100%;
+      box-sizing: border-box;
+      height: 48px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.92);
+      padding: 0 14px;
+      outline: none;
+      box-shadow: var(--dd-shadow2);
+    }
+
+    .tiny{
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.70);
+    }
+
+    .faqGrid{
+      display:grid;
+      gap: 10px;
+    }
+    details.faqItem{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      padding: 12px 14px;
+    }
+    details.faqItem summary{
+      cursor: pointer;
+      font-weight: 950;
+      color: rgba(255,255,255,0.90);
+      list-style: none;
+    }
+    details.faqItem summary::-webkit-details-marker{ display:none; }
+    details.faqItem p{
+      margin: 8px 0 0;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      h1{ font-size: 42px; }
+      .grid3{ grid-template-columns: 1fr; }
+      .waitForm{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px){
+      .hero{ padding: 14px; }
+      h1{ font-size: 38px; }
+      .btn{ width: 100%; }
+      .ctaRow{ display:grid; grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
 <body>
   <div class="container">
-    <!-- Keep header injected (reusable across pages) -->
     <div id="siteHeader"></div>
+<main class="page">
+  <section class="hero" aria-label="Doberman Deals landing hero">
+    <div class="heroGrid">
+      <div class="heroLeft">
+        <div class="lockup" aria-label="Brand lockup">
+          <img src="/assets/images/dd_logo_transparent.png" alt="Doberman Deals logo" loading="eager" decoding="async" />
+          <span>Doberman Deals</span>
+        </div>
 
-    <main class="page">
-      <!-- HERO -->
-      <section class="hero" aria-label="Doberman Deals hero">
-        <div class="heroGrid">
-          <div class="heroLeft">
-            <div class="brandLockup" aria-label="Brand lockup">
-              <img class="brandLogo" src="/assets/images/dd_logo_transparent.png" alt="Doberman Deals logo" loading="eager" decoding="async" />
-            </div>
+        <div class="pillRow" aria-label="Status and highlights">
+          <span class="pill"><span class="dot"></span>Coming soon</span>
+          <span class="pill">Cancel anytime</span>
+          <span class="pill">Doberman-first curation</span>
+          <span class="pill">Real value vs retail</span>
+        </div>
 
-            <h1 class="heroH1">Spoil Your Doberman Without Breaking the Bank</h1>
+        <h1>Spoil Your Doberman Without Breaking the Bank</h1>
 
-            <p class="heroSub">
-              Doberman Deals is a monthly curated subscription box packed with Doberman gear, toys, treats, and home decor.
-              Premium picks, real value, and a box you actually look forward to.
-            </p>
+        <p class="sub">
+          Doberman Deals is a monthly curated subscription box packed with Doberman gear, toys, treats, and home decor.
+          Premium picks, real value, and a box you actually look forward to.
+        </p>
 
-            <div class="heroCtas" aria-label="Primary calls to action">
-              <a class="btn primary" href="#subscribe">Get Your First Box</a>
-              <a class="btn secondary" href="#how-it-works">How It Works</a>
-            </div>
+        <div class="ctaRow" aria-label="Primary actions">
+          <a class="btn btnPrimary" href="#waitlist">Get launch updates</a>
+          <a class="btn btnGhost" href="#how-it-works">How it works</a>
+          <a class="btn" href="/subscribe/">Subscribe page (next)</a>
+        </div>
 
-            <div class="heroTrust" aria-label="Trust points">
-              <div class="trustPill">Cancel anytime</div>
-              <div class="trustPill">Doberman-first curation</div>
-              <div class="trustPill">Great value vs buying retail</div>
-            </div>
+        <div class="cardShell" aria-label="Quick promise">
+          <div class="sectionHead" style="margin-bottom:8px;">
+            <h2 class="h2" style="font-size:18px;">What you can expect</h2>
+            <p class="muted">We are building this right now.</p>
           </div>
-
-          <div class="heroRight" aria-label="Hero visual">
-            <div class="heroCard">
-              <div class="heroVisual">
-                <div class="heroVisualInner">
-                  <div class="badge">Monthly Box</div>
-                  <div class="heroVisualCopy">
-                    <div class="heroVisualK">This month could include</div>
-                    <ul class="heroVisualList">
-                      <li>Durable toy made for power chewers</li>
-                      <li>Training or enrichment item</li>
-                      <li>High-quality treats (optional)</li>
-                      <li>Doberman-themed accessory or decor</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="heroCardBar" aria-label="Hero bar">
-                <span class="tag">Curated picks</span>
-                <span class="tag">Practical items</span>
-                <span class="tag">Fun surprises</span>
-              </div>
+          <div class="grid3" aria-label="Value props">
+            <div class="card">
+              <div class="cardTitle">Curated for the breed</div>
+              <p class="cardText">Durability, training, activity, and Doberman style. No random filler.</p>
+            </div>
+            <div class="card">
+              <div class="cardTitle">Better picks, better value</div>
+              <p class="cardText">A box that beats impulse shopping and still feels premium.</p>
+            </div>
+            <div class="card">
+              <div class="cardTitle">Simple and flexible</div>
+              <p class="cardText">Clear cancel or pause. Clear expectations. No games.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- HOW IT WORKS -->
-      <section class="section" id="how-it-works" aria-label="How it works">
-        <div class="sectionHead">
-          <h2 class="h2">How It Works</h2>
-          <p class="muted">Simple steps. Zero guesswork.</p>
-        </div>
-
-        <div class="stepsGrid">
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">1</div>
-              <div class="cardTitle">Subscribe</div>
-            </div>
-            <p class="cardText">Choose monthly delivery. Cancel or pause anytime.</p>
+      <div class="heroRight" aria-label="Launch video">
+        <div class="videoCard">
+          <div class="videoTop">
+            <p class="videoTitle">Launch teaser</p>
+            <span class="badgeSoon">Coming soon</span>
           </div>
 
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">2</div>
-              <div class="cardTitle">We Curate</div>
-            </div>
-            <p class="cardText">We hand-pick items that Doberman owners actually use and love.</p>
-          </div>
-
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">3</div>
-              <div class="cardTitle">You Unbox</div>
-            </div>
-            <p class="cardText">Your Doberman gets a fresh batch of fun and utility every month.</p>
+          <div class="videoFrame" aria-label="YouTube video embed">
+            <iframe
+              src="https://www.youtube.com/embed/--tDaHK4_bo"
+              title="Exciting News for Doberman Owners! Doberman Deals is Coming Soon!"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- WHAT'S INSIDE -->
-      <section class="section" id="whats-inside" aria-label="What's inside">
-        <div class="sectionHead">
-          <h2 class="h2">What's Inside</h2>
-          <p class="muted">A balanced mix of fun, function, and Doberman pride.</p>
-        </div>
+  <section class="section" id="how-it-works" aria-label="How it works">
+    <div class="sectionHead">
+      <h2 class="h2">How It Works</h2>
+      <p class="muted">Simple steps. No confusion.</p>
+    </div>
 
-        <div class="featureGrid">
-          <div class="card">
-            <div class="cardTitle">Gear and Accessories</div>
-            <p class="cardText">Leashes, collars, tags, travel items, and useful upgrades.</p>
-          </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="cardTitle">1. Join the waitlist</div>
+        <p class="cardText">Get launch updates and early pricing when we open subscriptions.</p>
+      </div>
+      <div class="card">
+        <div class="cardTitle">2. We curate the monthly box</div>
+        <p class="cardText">Doberman-first picks: gear, toys, optional treats, and decor.</p>
+      </div>
+      <div class="card">
+        <div class="cardTitle">3. You unbox and repeat</div>
+        <p class="cardText">A monthly routine your dog actually looks forward to.</p>
+      </div>
+    </div>
+  </section>
 
-          <div class="card">
-            <div class="cardTitle">Toys and Enrichment</div>
-            <p class="cardText">Durable picks designed for active, smart, high-drive dogs.</p>
-          </div>
+  <section class="section" id="whats-inside" aria-label="Whats inside">
+    <div class="sectionHead">
+      <h2 class="h2">What's Inside</h2>
+      <p class="muted">A balanced mix of fun, function, and Doberman pride.</p>
+    </div>
 
-          <div class="card">
-            <div class="cardTitle">Treats (Optional)</div>
-            <p class="cardText">High-quality treats when included, with a focus on value and suitability.</p>
-          </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="cardTitle">Gear and accessories</div>
+        <p class="cardText">Useful upgrades for daily life, training, and travel.</p>
+      </div>
+      <div class="card">
+        <div class="cardTitle">Toys and enrichment</div>
+        <p class="cardText">Durable picks for smart, active, high-drive dogs.</p>
+      </div>
+      <div class="card">
+        <div class="cardTitle">Home and decor</div>
+        <p class="cardText">Doberman-themed items that feel premium and look great.</p>
+      </div>
+    </div>
+  </section>
 
-          <div class="card">
-            <div class="cardTitle">Home and Decor</div>
-            <p class="cardText">Doberman-themed items that look great and feel premium.</p>
-          </div>
-        </div>
-      </section>
+  <section class="section" id="subscribe" aria-label="Subscribe placeholder">
+    <div class="sectionHead">
+      <h2 class="h2">Subscribe</h2>
+      <p class="muted">Not open yet. Coming soon.</p>
+    </div>
 
-      <!-- SUBSCRIBE / PRICING -->
-      <section class="section" id="subscribe" aria-label="Subscribe section">
-        <div class="sectionHead">
-          <h2 class="h2">Subscribe</h2>
-          <p class="muted">Start simple. Upgrade later.</p>
-        </div>
+    <div class="card">
+      <div class="cardTitle">Subscriptions open soon</div>
+      <p class="cardText">We are finalizing box contents, sourcing, and pricing. Join the waitlist to get first access.</p>
+      <div class="ctaRow" style="margin-top:12px;">
+        <a class="btn btnPrimary" href="#waitlist">Join the waitlist</a>
+        <a class="btn" href="/subscribe/">Go to subscribe page</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="pricingGrid">
-          <div class="pricingCard">
-            <div class="pricingTop">
-              <div class="pricingTitle">Monthly Box</div>
-              <div class="pricingPrice">$XX<span class="pricingUnit">/month</span></div>
-              <div class="pricingNote">Pricing coming soon. Join the waitlist to get launch pricing.</div>
-            </div>
+  <section class="section" id="waitlist" aria-label="Waitlist">
+    <div class="sectionHead">
+      <h2 class="h2">Get Launch Updates</h2>
+      <p class="muted">Be first in line for early pricing and the first box drop.</p>
+    </div>
 
-            <ul class="pricingList">
-              <li>Curated Doberman items</li>
-              <li>New theme each month</li>
-              <li>Cancel or pause anytime</li>
-              <li>Email support</li>
-            </ul>
+    <div class="card waitlist">
+      <form class="waitForm" id="waitlistForm">
+        <label class="field">
+          <span class="fieldLabel">Email</span>
+          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <button class="btn btnPrimary" type="submit">Notify me</button>
+      </form>
+      <p class="tiny">This is a placeholder form for now. We will connect it to your provider next.</p>
+    </div>
+  </section>
 
-            <div class="pricingCtas">
-              <a class="btn primary" href="#waitlist">Join the Waitlist</a>
-              <a class="btn secondary" href="#faq">Read FAQs</a>
-            </div>
+  <section class="section" id="faq" aria-label="FAQ">
+    <div class="sectionHead">
+      <h2 class="h2">FAQ</h2>
+      <p class="muted">Quick answers.</p>
+    </div>
 
-            <p class="tiny muted">No spam. You will only hear from us about launch, boxes, and offers.</p>
-          </div>
+    <div class="faqGrid">
+      <details class="faqItem">
+        <summary>When do you launch?</summary>
+        <p>Coming soon. Join the waitlist and we will email the moment subscriptions open.</p>
+      </details>
 
-          <div class="valueCard">
-            <div class="valueTitle">Why Doberman Deals works</div>
-            <p class="valueText">
-              Most subscription boxes feel random. Doberman Deals is curated around a real breed lifestyle: training, activity, strength, and style.
-              You get better picks, better value, and a monthly routine your dog looks forward to.
-            </p>
+      <details class="faqItem">
+        <summary>Is this only for Dobermans?</summary>
+        <p>Yes. Curation is Doberman-first, focused on strength, activity, training, and style.</p>
+      </details>
 
-            <div class="valueBullets">
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Breed-first curation</strong> focused on durability and utility.</div>
-              </div>
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Premium feel</strong> without premium pricing.</div>
-              </div>
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Retention-friendly</strong> cancel/pause messaging is clear and honest.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <details class="faqItem">
+        <summary>Will treats always be included?</summary>
+        <p>No. Treats are optional and may vary by box theme. We will add preference options as we grow.</p>
+      </details>
 
-      <!-- WAITLIST (simple placeholder) -->
-      <section class="section" id="waitlist" aria-label="Waitlist">
-        <div class="sectionHead">
-          <h2 class="h2">Get Launch Updates</h2>
-          <p class="muted">Be first in line for early pricing and the first box drop.</p>
-        </div>
+      <details class="faqItem">
+        <summary>Can I cancel anytime?</summary>
+        <p>Yes. Our plan is clear pause or cancel anytime, with no runaround.</p>
+      </details>
+    </div>
+  </section>
+</main>
 
-        <div class="card">
-          <form class="waitlistForm" onsubmit="return window.DD && window.DD.waitlistSubmit(event);">
-            <label class="field">
-              <span class="fieldLabel">Email</span>
-              <input class="input" type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <button class="btn primary" type="submit">Notify Me</button>
-          </form>
-          <div class="toast" id="waitlistToast" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section" id="faq" aria-label="FAQ">
-        <div class="sectionHead">
-          <h2 class="h2">FAQ</h2>
-          <p class="muted">Quick answers to common questions.</p>
-        </div>
-
-        <div class="faqGrid">
-          <details class="faqItem">
-            <summary>Can I cancel anytime?</summary>
-            <p>Yes. You can cancel or pause whenever you want.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>Is this only for Dobermans?</summary>
-            <p>Doberman Deals is built for Doberman owners first. Items are chosen for strength, activity, and style.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>Do you ship internationally?</summary>
-            <p>Not at launch. We will start with the US and expand based on demand.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>What if my dog has dietary restrictions?</summary>
-            <p>Treats are optional and not always included. We will offer preference options as we grow.</p>
-          </details>
-        </div>
-
-        <div class="finalCta">
-          <div class="finalCtaInner">
-            <div>
-              <div class="finalTitle">Ready to spoil your Doberman?</div>
-              <div class="muted">Join the waitlist now and get launch pricing.</div>
-            </div>
-            <div class="finalBtns">
-              <a class="btn primary" href="#waitlist">Join Waitlist</a>
-              <a class="btn secondary" href="#how-it-works">How It Works</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer placeholder (you said you will add social later) -->
-    <div id="siteFooter"></div>
+<div id="siteFooter"></div>
   </div>
+  <script>
+    (function(){
+      var form = document.getElementById("waitlistForm");
+      if(!form) return;
 
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        try{
+          alert("Thanks. You are on the list. We will wire this form next.");
+        }catch(err){}
+        try{ form.reset(); }catch(err2){}
+      });
+    })();
+  </script>
   <script src="/assets/js/includes.js" defer></script>
   <script src="/assets/js/site.js" defer></script>
 </body>
