@@ -1,5 +1,5 @@
 /* /assets/js/site.js */
-/* Doberman Deals: mobile menu overlay toggle for header.html */
+/* Doberman Deals: fixed header spacer + mobile overlay menu toggle */
 
 (function(){
   function qs(sel, root){
@@ -7,6 +7,27 @@
   }
   function qsa(sel, root){
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+  }
+
+  function ensureSpacer(){
+    var siteHeaderMount = qs('#siteHeader');
+    if(!siteHeaderMount) return;
+
+    // Create spacer right after #siteHeader (once)
+    var next = siteHeaderMount.nextElementSibling;
+    if(!next || !next.classList.contains('ddHeaderSpacer')){
+      var spacer = document.createElement('div');
+      spacer.className = 'ddHeaderSpacer';
+      siteHeaderMount.parentNode.insertBefore(spacer, siteHeaderMount.nextSibling);
+    }
+
+    // Measure header height and store in CSS var
+    var header = qs('header.ddHeader[data-dd-header]');
+    if(!header) return;
+
+    // header includes top padding; measure actual rendered height
+    var h = Math.ceil(header.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--dd-header-h', h + 'px');
   }
 
   function setupHeader(){
@@ -18,7 +39,6 @@
 
     if(!burger || !mobile) return;
 
-    // Prevent double-binding
     if(burger.__ddBound) return;
     burger.__ddBound = true;
 
@@ -44,9 +64,8 @@
       toggleMenu();
     });
 
-    // Click outside the panel closes (overlay click)
+    // Click outside panel closes
     mobile.addEventListener('click', function(e){
-      // ddMobileLinks is the panel; clicking the dark overlay should close
       var panel = qs('.ddMobileLinks', mobile);
       if(!panel) return;
       if(e.target === mobile) closeMenu();
@@ -64,8 +83,9 @@
       if(e.key === 'Escape') closeMenu();
     });
 
-    // If resizing to desktop, force-close
+    // Recompute spacer on resize
     window.addEventListener('resize', function(){
+      ensureSpacer();
       try{
         if(window.matchMedia && window.matchMedia('(min-width: 981px)').matches){
           closeMenu();
@@ -73,18 +93,48 @@
       }catch(err){}
     }, { passive: true });
 
-    // Safety: start closed
+    // Start closed
     closeMenu();
+
+    // Ensure spacer after header exists and correct
+    ensureSpacer();
+
+    // If images in header load later, recalc once
+    try{
+      var img = qs('.ddBrandLogo', header);
+      if(img && !img.complete){
+        img.addEventListener('load', function(){ ensureSpacer(); }, { once:true });
+      }
+    }catch(e){}
+  }
+
+  function boot(){
+    setupHeader();
+    ensureSpacer();
+
+    // Re-run shortly after load in case includes/fonts affect final height
+    setTimeout(ensureSpacer, 50);
+    setTimeout(ensureSpacer, 250);
+    setTimeout(ensureSpacer, 800);
+
+    if(window.ResizeObserver){
+      try{
+        var header = qs('header.ddHeader[data-dd-header]');
+        if(header){
+          var ro = new ResizeObserver(function(){ ensureSpacer(); });
+          ro.observe(header);
+        }
+      }catch(e){}
+    }
   }
 
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', setupHeader);
+    document.addEventListener('DOMContentLoaded', boot);
   }else{
-    setupHeader();
+    boot();
   }
 
-  // If you load header via includes.js, it may arrive after DOMContentLoaded.
-  // Re-run when includes are ready (safe even if event never fires).
-  window.addEventListener('dd:includes:ready', setupHeader);
-  window.addEventListener('mbw:includes:ready', setupHeader);
+  // If your header is injected after load
+  window.addEventListener('dd:includes:ready', boot);
+  window.addEventListener('mbw:includes:ready', boot);
 })();
