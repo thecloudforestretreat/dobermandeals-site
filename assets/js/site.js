@@ -54,7 +54,6 @@
     top.appendChild(title);
     top.appendChild(closeBtn);
 
-    // Insert at top of panel
     panel.insertBefore(top, panel.firstChild);
   }
 
@@ -73,8 +72,6 @@
     burger.__ddBound = true;
 
     injectMobileTop(panel);
-
-    var closeBtn = qs(".ddMobileClose", panel);
 
     function openMenu(){
       mobile.hidden = false;
@@ -98,12 +95,14 @@
       toggleMenu();
     });
 
-    if(closeBtn){
-      closeBtn.addEventListener("click", function(e){
+    // Close button (bind after injection, query fresh)
+    panel.addEventListener("click", function(e){
+      var btn = e.target && e.target.closest ? e.target.closest(".ddMobileClose") : null;
+      if(btn){
         e.preventDefault();
         closeMenu();
-      });
-    }
+      }
+    });
 
     // Tap outside panel closes
     mobile.addEventListener("click", function(e){
@@ -120,7 +119,6 @@
       if(e.key === "Escape") closeMenu();
     });
 
-    // Resize: recompute spacer and close menu if going desktop
     window.addEventListener("resize", function(){
       ensureSpacer();
       try{
@@ -133,7 +131,6 @@
     closeMenu();
     ensureSpacer();
 
-    // If logo loads later, recalc
     try{
       var img = qs(".ddBrandLogo", header);
       if(img && !img.complete){
@@ -145,7 +142,6 @@
   function boot(){
     setupHeader();
     ensureSpacer();
-
     setTimeout(ensureSpacer, 50);
     setTimeout(ensureSpacer, 250);
     setTimeout(ensureSpacer, 800);
@@ -167,7 +163,6 @@
     boot();
   }
 
-  // If header is injected after load
   window.addEventListener("dd:includes:ready", boot);
   window.addEventListener("mbw:includes:ready", boot);
 })();
