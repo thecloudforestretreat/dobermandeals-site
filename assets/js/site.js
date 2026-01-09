@@ -1,140 +1,295 @@
-/* /assets/js/site.js */
-/* Doberman Deals: fixed header spacer + mobile overlay menu toggle */
+/* /assets/js/site.js
+   The Cloud Forest Retreat (TCFR)
+   - Injects /assets/includes/header.html into #siteHeader (once)
+   - Injects /assets/includes/footer.html into #siteFooter (optional, once)
+   - Reliable mobile hamburger open/close (no "stuck open")
+   - Mobile accordion groups
+   - Sticky scrolled state (.is-scrolled)
+   - GA4 loader: G-D3W4SP5MGX
+   ASCII-only.
+*/
+(function () {
+  "use strict";
 
-(function(){
-  function qs(sel, root){
-    return (root || document).querySelector(sel);
+  var GA_ID = "G-D3W4SP5MGX";
+  var HEADER_MOUNT_ID = "siteHeader";
+  var FOOTER_MOUNT_ID = "siteFooter";
+  var HEADER_URL = "/assets/includes/header.html";
+  var FOOTER_URL = "/assets/includes/footer.html";
+
+  /* =========================
+     GA4
+     ========================= */
+  function initGA4() {
+    if (window.__TCFR_GA4_LOADED__) return;
+    window.__TCFR_GA4_LOADED__ = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
+
+    var hasGtag = document.querySelector(
+      'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
+    );
+
+    if (!hasGtag) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src =
+        "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+    }
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, {
+      anonymize_ip: true,
+      send_page_view: true
+    });
   }
-  function qsa(sel, root){
-    return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+
+  /* =========================
+     Helpers
+     ========================= */
+  function qs(root, sel) {
+    return root ? root.querySelector(sel) : null;
   }
 
-  function ensureSpacer(){
-    var siteHeaderMount = qs('#siteHeader');
-    if(!siteHeaderMount) return;
-
-    // Create spacer right after #siteHeader (once)
-    var next = siteHeaderMount.nextElementSibling;
-    if(!next || !next.classList.contains('ddHeaderSpacer')){
-      var spacer = document.createElement('div');
-      spacer.className = 'ddHeaderSpacer';
-      siteHeaderMount.parentNode.insertBefore(spacer, siteHeaderMount.nextSibling);
-    }
-
-    // Measure header height and store in CSS var
-    var header = qs('header.ddHeader[data-dd-header]');
-    if(!header) return;
-
-    // header includes top padding; measure actual rendered height
-    var h = Math.ceil(header.getBoundingClientRect().height);
-    document.documentElement.style.setProperty('--dd-header-h', h + 'px');
+  function qsa(root, sel) {
+    return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : [];
   }
 
-  function setupHeader(){
-    var header = qs('header.ddHeader[data-dd-header]');
-    if(!header) return;
+  function hasHeaderAlready(mount) {
+    if (!mount) return false;
+    return !!qs(mount, "[data-tcfr-header]");
+  }
 
-    var burger = qs('[data-dd-burger]', header);
-    var mobile = qs('[data-dd-mobile]', header);
+  function safeText(res) {
+    return res && typeof res.text === "function" ? res.text() : Promise.resolve("");
+  }
 
-    if(!burger || !mobile) return;
+  function fetchHtml(url) {
+    // Cache-bust lightly for staging; harmless in prod.
+    var u = url + (url.indexOf("?") === -1 ? "?" : "&") + "v=" + Date.now();
+    return fetch(u, { cache: "no-store" }).then(function (res) {
+      if (!res.ok) return "";
+      return safeText(res);
+    }).catch(function () {
+      return "";
+    });
+  }
 
-    if(burger.__ddBound) return;
-    burger.__ddBound = true;
+  function injectOnce(mountId, url, markerAttr) {
+    var mount = document.getElementById(mountId);
+    if (!mount) return Promise.resolve(null);
 
-    function openMenu(){
-      mobile.hidden = false;
-      burger.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('ddMenuOpen');
+    if (markerAttr && qs(mount, "[" + markerAttr + "]")) {
+      return Promise.resolve(mount);
     }
 
-    function closeMenu(){
-      mobile.hidden = true;
-      burger.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('ddMenuOpen');
+    // If mount already has content and no marker, do not overwrite.
+    if (mount.innerHTML && mount.innerHTML.trim().length > 0 && !markerAttr) {
+      return Promise.resolve(mount);
     }
 
-    function toggleMenu(){
-      if(mobile.hidden) openMenu();
-      else closeMenu();
-    }
+    return fetchHtml(url).then(function (html) {
+      if (!html) return mount;
+      mount.innerHTML = html;
+      return mount;
+    });
+  }
 
-    burger.addEventListener('click', function(e){
-      e.preventDefault();
-      toggleMenu();
+  /* =========================
+     Header behavior (robust)
+     ========================= */
+  function ensureClosed(header) {
+    document.documentElement.classList.remove("tcfr-navOpen");
+
+    var burger = qs(header, ".tcfr-burger");
+    var panel = qs(header, ".tcfr-mobilePanel");
+    var overlay = qs(header, ".tcfr-mobileOverlay");
+
+    if (burger) burger.setAttribute("aria-expanded", "false");
+
+    // Keep hidden attributes consistent (even if CSS controls display).
+    if (panel) panel.hidden = true;
+    if (overlay) overlay.hidden = true;
+
+    // Collapse accordions
+    qsa(header, ".tcfr-mGroup").forEach(function (btn) {
+      btn.setAttribute("aria-expanded", "false");
+      var id = btn.getAttribute("aria-controls");
+      var sub = id ? document.getElementById(id) : null;
+      if (sub) sub.hidden = true;
     });
 
-    // Click outside panel closes
-    mobile.addEventListener('click', function(e){
-      var panel = qs('.ddMobileLinks', mobile);
-      if(!panel) return;
-      if(e.target === mobile) closeMenu();
-    });
+    document.body.style.overflow = "";
+    document.body.style.touchAction = "";
+  }
 
-    // Clicking any mobile link closes
-    qsa('.ddMobileLink', mobile).forEach(function(a){
-      a.addEventListener('click', function(){
-        closeMenu();
-      });
+  function openMenu(header) {
+    if (!header) return;
+
+    var burger = qs(header, ".tcfr-burger");
+    var panel = qs(header, ".tcfr-mobilePanel");
+    var overlay = qs(header, ".tcfr-mobileOverlay");
+
+    if (!burger || !panel || !overlay) return;
+
+    // Only open on mobile widths
+    if (window.innerWidth >= 901) return;
+
+    document.documentElement.classList.add("tcfr-navOpen");
+    burger.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
+    overlay.hidden = false;
+
+    document.body.style.overflow = "hidden";
+    document.body.style.touchAction = "none";
+  }
+
+  function closeMenu(header) {
+    if (!header) return;
+    ensureClosed(header);
+  }
+
+  function toggleMenu(header) {
+    var isOpen = document.documentElement.classList.contains("tcfr-navOpen");
+    if (isOpen) closeMenu(header);
+    else openMenu(header);
+  }
+
+  function bindHeaderOnce(header) {
+    if (!header || header.__tcfrBound) return;
+    header.__tcfrBound = true;
+
+    // Force CLOSED at startup to prevent "stuck open" from any prior CSS/HTML state
+    ensureClosed(header);
+
+    // Click handling (delegated inside header)
+    header.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!t) return;
+
+      var burger = t.closest ? t.closest(".tcfr-burger") : null;
+      if (burger && header.contains(burger)) {
+        e.preventDefault();
+        toggleMenu(header);
+        return;
+      }
+
+      var closeBtn = t.closest ? t.closest(".tcfr-close") : null;
+      if (closeBtn && header.contains(closeBtn)) {
+        e.preventDefault();
+        closeMenu(header);
+        return;
+      }
+
+      var overlay = t.closest ? t.closest(".tcfr-mobileOverlay") : null;
+      if (overlay && header.contains(overlay)) {
+        e.preventDefault();
+        closeMenu(header);
+        return;
+      }
+
+      var group = t.closest ? t.closest(".tcfr-mGroup") : null;
+      if (group && header.contains(group)) {
+        e.preventDefault();
+        var id = group.getAttribute("aria-controls");
+        var sub = id ? document.getElementById(id) : null;
+        if (!sub) return;
+
+        var isOpen = group.getAttribute("aria-expanded") === "true";
+        group.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        sub.hidden = isOpen ? true : false;
+        return;
+      }
+
+      // Any mobile link click closes
+      var link = t.closest ? t.closest(".tcfr-navMobile a[href]") : null;
+      if (link && header.contains(link)) {
+        closeMenu(header);
+      }
     });
 
     // ESC closes
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape') closeMenu();
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu(header);
     });
 
-    // Recompute spacer on resize
-    window.addEventListener('resize', function(){
-      ensureSpacer();
-      try{
-        if(window.matchMedia && window.matchMedia('(min-width: 981px)').matches){
-          closeMenu();
-        }
-      }catch(err){}
-    }, { passive: true });
+    // Clicking outside header closes if open
+    document.addEventListener("click", function (e) {
+      if (!document.documentElement.classList.contains("tcfr-navOpen")) return;
+      if (!header.contains(e.target)) closeMenu(header);
+    });
 
-    // Start closed
-    closeMenu();
+    // Resize to desktop closes
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 901) closeMenu(header);
+    });
 
-    // Ensure spacer after header exists and correct
-    ensureSpacer();
-
-    // If images in header load later, recalc once
-    try{
-      var img = qs('.ddBrandLogo', header);
-      if(img && !img.complete){
-        img.addEventListener('load', function(){ ensureSpacer(); }, { once:true });
-      }
-    }catch(e){}
-  }
-
-  function boot(){
-    setupHeader();
-    ensureSpacer();
-
-    // Re-run shortly after load in case includes/fonts affect final height
-    setTimeout(ensureSpacer, 50);
-    setTimeout(ensureSpacer, 250);
-    setTimeout(ensureSpacer, 800);
-
-    if(window.ResizeObserver){
-      try{
-        var header = qs('header.ddHeader[data-dd-header]');
-        if(header){
-          var ro = new ResizeObserver(function(){ ensureSpacer(); });
-          ro.observe(header);
-        }
-      }catch(e){}
+    // Sticky scroll class
+    function onScroll() {
+      var y = window.scrollY || 0;
+      header.classList.toggle("is-scrolled", y > 10);
     }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', boot);
-  }else{
+  function tryInitHeaderFromMount() {
+    var mount = document.getElementById(HEADER_MOUNT_ID);
+    if (!mount) return null;
+
+    // Header markup is <header class="tcfr-header" data-tcfr-header>
+    var header = qs(mount, "[data-tcfr-header]") || qs(mount, ".tcfr-header") || qs(mount, "header");
+    if (!header) return null;
+
+    bindHeaderOnce(header);
+    return header;
+  }
+
+  function observeHeaderMount() {
+    var mount = document.getElementById(HEADER_MOUNT_ID);
+    if (!mount) return;
+
+    // If injected later, init when it appears
+    var mo = new MutationObserver(function () {
+      var header = tryInitHeaderFromMount();
+      if (header) mo.disconnect();
+    });
+
+    mo.observe(mount, { childList: true, subtree: true });
+  }
+
+  /* =========================
+     Boot
+     ========================= */
+  function boot() {
+    initGA4();
+
+    var headerMount = document.getElementById(HEADER_MOUNT_ID);
+
+    var headerPromise = headerMount && hasHeaderAlready(headerMount)
+      ? Promise.resolve(headerMount)
+      : injectOnce(HEADER_MOUNT_ID, HEADER_URL, "data-tcfr-header");
+
+    var footerPromise = injectOnce(FOOTER_MOUNT_ID, FOOTER_URL, null);
+
+    Promise.all([headerPromise, footerPromise]).then(function () {
+      // Init immediately if present, otherwise observe
+      if (!tryInitHeaderFromMount()) observeHeaderMount();
+    }).catch(function () {
+      // Still try init; worst case you get content but no JS
+      if (!tryInitHeaderFromMount()) observeHeaderMount();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
     boot();
   }
-
-  // If your header is injected after load
-  window.addEventListener('dd:includes:ready', boot);
-  window.addEventListener('mbw:includes:ready', boot);
 })();
