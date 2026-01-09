@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Doberman Deals | Monthly Curated Doberman Subscription Box</title>
+  <title>Subscribe | Doberman Deals</title>
   <meta name="description" content="Doberman Deals is a monthly curated box of Doberman gear, toys, treats, and decor. Spoil your Doberman without breaking the bank. Cancel anytime." />
-
-  <link rel="canonical" href="https://dobermandeals.com/" />
-  <link rel="alternate" hreflang="en" href="/" />
-  <link rel="alternate" hreflang="x-default" href="/" />
-
+  <link rel="canonical" href="https://dobermandeals.com/subscribe/" />
+  <link rel="alternate" hreflang="en" href="/subscribe/" />
+  <link rel="alternate" hreflang="x-default" href="/subscribe/" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Doberman Deals" />
-  <meta property="og:title" content="Doberman Deals | Monthly Curated Doberman Subscription Box" />
+  <meta property="og:title" content="Subscribe | Doberman Deals" />
   <meta property="og:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Premium picks, real value, cancel anytime." />
-  <meta property="og:url" content="https://dobermandeals.com/" />
+  <meta property="og:url" content="https://dobermandeals.com/subscribe/" />
   <meta property="og:image" content="https://dobermandeals.com/og-dd.jpg" />
   <meta property="og:image:secure_url" content="https://dobermandeals.com/og-dd.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Doberman Deals - monthly curated subscription box for Doberman owners" />
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Doberman Deals | Monthly Curated Doberman Subscription Box" />
+  <meta name="twitter:title" content="Subscribe | Doberman Deals" />
   <meta name="twitter:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Premium picks, real value, cancel anytime." />
   <meta name="twitter:image" content="https://dobermandeals.com/og-dd.jpg" />
-
   <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -36,28 +31,16 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#000000" />
-
   <!-- Fonts (brand kit) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
   <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
-
-  <!-- Head-only JS -->
+  <link rel="stylesheet" href="/assets/css/footer.css" />
+  <!-- Head-only JS (includes GA via your head.js) -->
   <script src="/assets/js/head.js" defer></script>
-
-  <!-- GA4 (G-FGX9MBEM2R) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGX9MBEM2R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-FGX9MBEM2R");
-  </script>
-
   <style>
     :root{
       --dd-black:#000000;
@@ -96,13 +79,11 @@
       padding: 0 16px 80px;
     }
 
-    /* Page */
     .page{
       margin-top: 16px;
       display:block;
     }
 
-    /* HERO */
     .hero{
       margin-top: 10px;
       border: 1px solid var(--line);
@@ -169,7 +150,6 @@
       margin-top: 4px;
     }
 
-    /* Buttons (simple local style so page works even if global btn differs) */
     .btn{
       display:inline-flex;
       align-items:center;
@@ -197,10 +177,7 @@
       border-color: rgba(255,255,255,0.12);
     }
     .btn.primary:hover{ background: linear-gradient(90deg, rgba(230,57,70,1), rgba(255,193,7,0.95)); }
-
-    .btn.secondary{
-      background: rgba(255,255,255,0.06);
-    }
+    .btn.secondary{ background: rgba(255,255,255,0.06); }
 
     .heroTrust{
       display:flex;
@@ -223,7 +200,6 @@
       white-space: nowrap;
     }
 
-    /* HERO RIGHT */
     .heroRight{
       display:grid;
       align-content: start;
@@ -254,10 +230,9 @@
       padding: 14px;
       display:grid;
       gap: 12px;
-      overflow:hidden; /* prevents badge visual glitches */
+      overflow:hidden;
     }
 
-    /* FIX: Badge no longer distorts on mobile/desktop */
     .badge{
       display:inline-flex;
       align-items:center;
@@ -315,7 +290,6 @@
       white-space: nowrap;
     }
 
-    /* Sections */
     .section{
       margin-top: 18px;
       border: 1px solid var(--line);
@@ -609,7 +583,10 @@
       flex-wrap: wrap;
     }
 
-    /* Responsive */
+    .footerWrap{
+      margin-top: 16px;
+    }
+
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
       .stepsGrid{ grid-template-columns: 1fr; }
@@ -622,385 +599,255 @@
       .heroH1{ font-size: 40px; }
       .waitlistForm{ grid-template-columns: 1fr; }
       .btn{ width: 100%; }
-      .heroCtas{ width: 100%; }
-      .heroCtas .btn{ width: calc(50% - 6px); }
-      .heroCtas .btn.primary{ width: calc(50% - 6px); }
-      .heroCtas .btn.secondary{ width: calc(50% - 6px); }
-      .heroCtas{ gap: 12px; }
+      .heroCtas{ width: 100%; gap: 12px; }
       .finalCtaInner{ align-items: stretch; }
       .finalBtns .btn{ width: 100%; }
     }
-
-    @media (max-width: 420px){
-      .heroCtas .btn{ width: 100%; }
-    }
-
-    /* --------- HEADER OVERLAY FIX (works with injected header markup) ---------
-       This makes the mobile menu an overlay and prevents "pushing" the page down.
-       JS in /assets/js/site.js should toggle: body.dd-menu-open and #ddMobileOverlay[hidden].
-    */
-    body.dd-menu-open{ overflow: hidden; }
-
-    #ddMobileOverlay{
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(0,0,0,0.72);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
-    }
-
-    #ddMobileOverlay[hidden]{ display:none; }
-
-    .ddOverlayPanel{
-      max-width: 520px;
-      margin: 10px auto;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(15,15,16,0.92);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-
-    .ddOverlayTop{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      padding: 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .ddOverlayBrand{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      font-weight: 950;
-      letter-spacing: -0.01em;
-    }
-
-    .ddOverlayBrand img{
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 5px;
-    }
-
-    .ddOverlayClose{
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.92);
-      cursor:pointer;
-      font-weight: 950;
-    }
-
-    .ddOverlayNav{
-      display:grid;
-      gap: 10px;
-      padding: 14px;
-    }
-
-    .ddOverlayNav a{
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-      min-height: 56px;
-      padding: 0 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
-      color: rgba(255,255,255,0.90);
-      text-decoration:none;
-      font-weight: 900;
-      font-size: 18px;
-    }
-
-    .ddOverlayNav a:hover{
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.18);
-    }
   </style>
 </head>
-
 <body>
   <div class="container">
-    <!-- Keep header injected (reusable across pages) -->
     <div id="siteHeader"></div>
-
-    <!-- Mobile menu overlay (does not affect layout, fixes "push down") -->
-    <div id="ddMobileOverlay" hidden aria-hidden="true">
-      <div class="ddOverlayPanel" role="dialog" aria-modal="true" aria-label="Doberman Deals menu">
-        <div class="ddOverlayTop">
-          <div class="ddOverlayBrand">
-            <img src="/assets/images/dd_logo_transparent.png" alt="Doberman Deals" loading="eager" decoding="async" />
-            <span>Doberman Deals</span>
-          </div>
-          <button class="ddOverlayClose" type="button" id="ddMenuCloseBtn" aria-label="Close menu">X</button>
+<main class="page">
+  <section class="hero" aria-label="Doberman Deals hero">
+    <div class="heroGrid">
+      <div class="heroLeft">
+        <div class="brandLockup" aria-label="Brand lockup">
+          <img class="brandLogo" src="/assets/images/dd_logo_transparent.png" alt="Doberman Deals logo" loading="eager" decoding="async" />
         </div>
-        <nav class="ddOverlayNav" aria-label="Mobile navigation">
-          <a href="#how-it-works">How It Works</a>
-          <a href="#whats-inside">What's Inside</a>
-          <a href="#subscribe">Subscribe</a>
-          <a href="#faq">FAQ</a>
-          <a href="/contact/">Contact</a>
-          <a href="/account/">Account</a>
-        </nav>
+
+        <h1 class="heroH1">Spoil Your Doberman Without Breaking the Bank</h1>
+
+        <p class="heroSub">
+          Doberman Deals is a monthly curated subscription box packed with Doberman gear, toys, treats, and home decor.
+          Premium picks, real value, and a box you actually look forward to.
+        </p>
+
+        <div class="heroCtas" aria-label="Primary calls to action">
+          <a class="btn primary" href="#subscribe">Get Your First Box</a>
+          <a class="btn secondary" href="#how-it-works">How It Works</a>
+        </div>
+
+        <div class="heroTrust" aria-label="Trust points">
+          <div class="trustPill">Cancel anytime</div>
+          <div class="trustPill">Doberman-first curation</div>
+          <div class="trustPill">Great value vs buying retail</div>
+        </div>
+      </div>
+
+      <div class="heroRight" aria-label="Hero visual">
+        <div class="heroCard">
+          <div class="heroVisual">
+            <div class="heroVisualInner">
+              <div class="badge">Monthly Box</div>
+              <div class="heroVisualCopy">
+                <div class="heroVisualK">This month could include</div>
+                <ul class="heroVisualList">
+                  <li>Durable toy made for power chewers</li>
+                  <li>Training or enrichment item</li>
+                  <li>High-quality treats (optional)</li>
+                  <li>Doberman-themed accessory or decor</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="heroCardBar" aria-label="Hero bar">
+            <span class="tag">Curated picks</span>
+            <span class="tag">Practical items</span>
+            <span class="tag">Fun surprises</span>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <main class="page">
-      <!-- HERO -->
-      <section class="hero" aria-label="Doberman Deals hero">
-        <div class="heroGrid">
-          <div class="heroLeft">
-            <div class="brandLockup" aria-label="Brand lockup">
-              <img class="brandLogo" src="/assets/images/dd_logo_transparent.png" alt="Doberman Deals logo" loading="eager" decoding="async" />
-            </div>
+  <section class="section" id="how-it-works" aria-label="How it works">
+    <div class="sectionHead">
+      <h2 class="h2">How It Works</h2>
+      <p class="muted">Simple steps. Zero guesswork.</p>
+    </div>
 
-            <h1 class="heroH1">Spoil Your Doberman Without Breaking the Bank</h1>
-
-            <p class="heroSub">
-              Doberman Deals is a monthly curated subscription box packed with Doberman gear, toys, treats, and home decor.
-              Premium picks, real value, and a box you actually look forward to.
-            </p>
-
-            <div class="heroCtas" aria-label="Primary calls to action">
-              <a class="btn primary" href="#subscribe">Get Your First Box</a>
-              <a class="btn secondary" href="#how-it-works">How It Works</a>
-            </div>
-
-            <div class="heroTrust" aria-label="Trust points">
-              <div class="trustPill">Cancel anytime</div>
-              <div class="trustPill">Doberman-first curation</div>
-              <div class="trustPill">Great value vs buying retail</div>
-            </div>
-          </div>
-
-          <div class="heroRight" aria-label="Hero visual">
-            <div class="heroCard">
-              <div class="heroVisual">
-                <div class="heroVisualInner">
-                  <div class="badge">Monthly Box</div>
-                  <div class="heroVisualCopy">
-                    <div class="heroVisualK">This month could include</div>
-                    <ul class="heroVisualList">
-                      <li>Durable toy made for power chewers</li>
-                      <li>Training or enrichment item</li>
-                      <li>High-quality treats (optional)</li>
-                      <li>Doberman-themed accessory or decor</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="heroCardBar" aria-label="Hero bar">
-                <span class="tag">Curated picks</span>
-                <span class="tag">Practical items</span>
-                <span class="tag">Fun surprises</span>
-              </div>
-            </div>
-          </div>
+    <div class="stepsGrid">
+      <div class="card">
+        <div class="cardTop">
+          <div class="stepNum">1</div>
+          <div class="cardTitle">Subscribe</div>
         </div>
-      </section>
+        <p class="cardText">Choose monthly delivery. Cancel or pause anytime.</p>
+      </div>
 
-      <!-- HOW IT WORKS -->
-      <section class="section" id="how-it-works" aria-label="How it works">
-        <div class="sectionHead">
-          <h2 class="h2">How It Works</h2>
-          <p class="muted">Simple steps. Zero guesswork.</p>
+      <div class="card">
+        <div class="cardTop">
+          <div class="stepNum">2</div>
+          <div class="cardTitle">We Curate</div>
         </div>
+        <p class="cardText">We hand-pick items that Doberman owners actually use and love.</p>
+      </div>
 
-        <div class="stepsGrid">
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">1</div>
-              <div class="cardTitle">Subscribe</div>
-            </div>
-            <p class="cardText">Choose monthly delivery. Cancel or pause anytime.</p>
-          </div>
-
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">2</div>
-              <div class="cardTitle">We Curate</div>
-            </div>
-            <p class="cardText">We hand-pick items that Doberman owners actually use and love.</p>
-          </div>
-
-          <div class="card">
-            <div class="cardTop">
-              <div class="stepNum">3</div>
-              <div class="cardTitle">You Unbox</div>
-            </div>
-            <p class="cardText">Your Doberman gets a fresh batch of fun and utility every month.</p>
-          </div>
+      <div class="card">
+        <div class="cardTop">
+          <div class="stepNum">3</div>
+          <div class="cardTitle">You Unbox</div>
         </div>
-      </section>
+        <p class="cardText">Your Doberman gets a fresh batch of fun and utility every month.</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- WHAT'S INSIDE -->
-      <section class="section" id="whats-inside" aria-label="What's inside">
-        <div class="sectionHead">
-          <h2 class="h2">What's Inside</h2>
-          <p class="muted">A balanced mix of fun, function, and Doberman pride.</p>
+  <section class="section" id="whats-inside" aria-label="What's inside">
+    <div class="sectionHead">
+      <h2 class="h2">What's Inside</h2>
+      <p class="muted">A balanced mix of fun, function, and Doberman pride.</p>
+    </div>
+
+    <div class="featureGrid">
+      <div class="card">
+        <div class="cardTitle">Gear and Accessories</div>
+        <p class="cardText">Leashes, collars, tags, travel items, and useful upgrades.</p>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Toys and Enrichment</div>
+        <p class="cardText">Durable picks designed for active, smart, high-drive dogs.</p>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Treats (Optional)</div>
+        <p class="cardText">High-quality treats when included, with a focus on value and suitability.</p>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Home and Decor</div>
+        <p class="cardText">Doberman-themed items that look great and feel premium.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="subscribe" aria-label="Subscribe section">
+    <div class="sectionHead">
+      <h2 class="h2">Subscribe</h2>
+      <p class="muted">Start simple. Upgrade later.</p>
+    </div>
+
+    <div class="pricingGrid">
+      <div class="pricingCard">
+        <div class="pricingTop">
+          <div class="pricingTitle">Monthly Box</div>
+          <div class="pricingPrice">$XX<span class="pricingUnit">/month</span></div>
+          <div class="pricingNote">Pricing coming soon. Join the waitlist to get launch pricing.</div>
         </div>
 
-        <div class="featureGrid">
-          <div class="card">
-            <div class="cardTitle">Gear and Accessories</div>
-            <p class="cardText">Leashes, collars, tags, travel items, and useful upgrades.</p>
-          </div>
+        <ul class="pricingList">
+          <li>Curated Doberman items</li>
+          <li>New theme each month</li>
+          <li>Cancel or pause anytime</li>
+          <li>Email support</li>
+        </ul>
 
-          <div class="card">
-            <div class="cardTitle">Toys and Enrichment</div>
-            <p class="cardText">Durable picks designed for active, smart, high-drive dogs.</p>
-          </div>
-
-          <div class="card">
-            <div class="cardTitle">Treats (Optional)</div>
-            <p class="cardText">High-quality treats when included, with a focus on value and suitability.</p>
-          </div>
-
-          <div class="card">
-            <div class="cardTitle">Home and Decor</div>
-            <p class="cardText">Doberman-themed items that look great and feel premium.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SUBSCRIBE / PRICING -->
-      <section class="section" id="subscribe" aria-label="Subscribe section">
-        <div class="sectionHead">
-          <h2 class="h2">Subscribe</h2>
-          <p class="muted">Start simple. Upgrade later.</p>
+        <div class="pricingCtas">
+          <a class="btn primary" href="#waitlist">Join the Waitlist</a>
+          <a class="btn secondary" href="#faq">Read FAQs</a>
         </div>
 
-        <div class="pricingGrid">
-          <div class="pricingCard">
-            <div class="pricingTop">
-              <div class="pricingTitle">Monthly Box</div>
-              <div class="pricingPrice">$XX<span class="pricingUnit">/month</span></div>
-              <div class="pricingNote">Pricing coming soon. Join the waitlist to get launch pricing.</div>
-            </div>
+        <p class="tiny muted">No spam. You will only hear from us about launch, boxes, and offers.</p>
+      </div>
 
-            <ul class="pricingList">
-              <li>Curated Doberman items</li>
-              <li>New theme each month</li>
-              <li>Cancel or pause anytime</li>
-              <li>Email support</li>
-            </ul>
+      <div class="valueCard">
+        <div class="valueTitle">Why Doberman Deals works</div>
+        <p class="valueText">
+          Most subscription boxes feel random. Doberman Deals is curated around a real breed lifestyle: training, activity, strength, and style.
+          You get better picks, better value, and a monthly routine your dog looks forward to.
+        </p>
 
-            <div class="pricingCtas">
-              <a class="btn primary" href="#waitlist">Join the Waitlist</a>
-              <a class="btn secondary" href="#faq">Read FAQs</a>
-            </div>
-
-            <p class="tiny muted">No spam. You will only hear from us about launch, boxes, and offers.</p>
+        <div class="valueBullets">
+          <div class="bullet">
+            <div class="dot"></div>
+            <div><strong>Breed-first curation</strong> focused on durability and utility.</div>
           </div>
-
-          <div class="valueCard">
-            <div class="valueTitle">Why Doberman Deals works</div>
-            <p class="valueText">
-              Most subscription boxes feel random. Doberman Deals is curated around a real breed lifestyle: training, activity, strength, and style.
-              You get better picks, better value, and a monthly routine your dog looks forward to.
-            </p>
-
-            <div class="valueBullets">
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Breed-first curation</strong> focused on durability and utility.</div>
-              </div>
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Premium feel</strong> without premium pricing.</div>
-              </div>
-              <div class="bullet">
-                <div class="dot"></div>
-                <div><strong>Clear cancel/pause</strong> messaging builds trust and retention.</div>
-              </div>
-            </div>
+          <div class="bullet">
+            <div class="dot"></div>
+            <div><strong>Premium feel</strong> without premium pricing.</div>
+          </div>
+          <div class="bullet">
+            <div class="dot"></div>
+            <div><strong>Clear cancel/pause</strong> messaging builds trust and retention.</div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- WAITLIST (simple placeholder) -->
-      <section class="section" id="waitlist" aria-label="Waitlist">
-        <div class="sectionHead">
-          <h2 class="h2">Get Launch Updates</h2>
-          <p class="muted">Be first in line for early pricing and the first box drop.</p>
+  <section class="section" id="waitlist" aria-label="Waitlist">
+    <div class="sectionHead">
+      <h2 class="h2">Get Launch Updates</h2>
+      <p class="muted">Be first in line for early pricing and the first box drop.</p>
+    </div>
+
+    <div class="card">
+      <form class="waitlistForm" id="waitlistForm">
+        <label class="field">
+          <span class="fieldLabel">Email</span>
+          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <button class="btn primary" type="submit">Notify Me</button>
+      </form>
+      <div class="toast" id="waitlistToast" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-label="FAQ">
+    <div class="sectionHead">
+      <h2 class="h2">FAQ</h2>
+      <p class="muted">Quick answers to common questions.</p>
+    </div>
+
+    <div class="faqGrid">
+      <details class="faqItem">
+        <summary>Can I cancel anytime?</summary>
+        <p>Yes. You can cancel or pause whenever you want.</p>
+      </details>
+
+      <details class="faqItem">
+        <summary>Is this only for Dobermans?</summary>
+        <p>Doberman Deals is built for Doberman owners first. Items are chosen for strength, activity, and style.</p>
+      </details>
+
+      <details class="faqItem">
+        <summary>Do you ship internationally?</summary>
+        <p>Not at launch. We will start with the US and expand based on demand.</p>
+      </details>
+
+      <details class="faqItem">
+        <summary>What if my dog has dietary restrictions?</summary>
+        <p>Treats are optional and not always included. We will offer preference options as we grow.</p>
+      </details>
+    </div>
+
+    <div class="finalCta">
+      <div class="finalCtaInner">
+        <div>
+          <div class="finalTitle">Ready to spoil your Doberman?</div>
+          <div class="muted">Join the waitlist now and get launch pricing.</div>
         </div>
-
-        <div class="card">
-          <form class="waitlistForm" id="waitlistForm">
-            <label class="field">
-              <span class="fieldLabel">Email</span>
-              <input class="input" type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <button class="btn primary" type="submit">Notify Me</button>
-          </form>
-          <div class="toast" id="waitlistToast" aria-live="polite"></div>
+        <div class="finalBtns">
+          <a class="btn primary" href="#waitlist">Join Waitlist</a>
+          <a class="btn secondary" href="#how-it-works">How It Works</a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+</main>
 
-      <!-- FAQ -->
-      <section class="section" id="faq" aria-label="FAQ">
-        <div class="sectionHead">
-          <h2 class="h2">FAQ</h2>
-          <p class="muted">Quick answers to common questions.</p>
-        </div>
-
-        <div class="faqGrid">
-          <details class="faqItem">
-            <summary>Can I cancel anytime?</summary>
-            <p>Yes. You can cancel or pause whenever you want.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>Is this only for Dobermans?</summary>
-            <p>Doberman Deals is built for Doberman owners first. Items are chosen for strength, activity, and style.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>Do you ship internationally?</summary>
-            <p>Not at launch. We will start with the US and expand based on demand.</p>
-          </details>
-
-          <details class="faqItem">
-            <summary>What if my dog has dietary restrictions?</summary>
-            <p>Treats are optional and not always included. We will offer preference options as we grow.</p>
-          </details>
-        </div>
-
-        <div class="finalCta">
-          <div class="finalCtaInner">
-            <div>
-              <div class="finalTitle">Ready to spoil your Doberman?</div>
-              <div class="muted">Join the waitlist now and get launch pricing.</div>
-            </div>
-            <div class="finalBtns">
-              <a class="btn primary" href="#waitlist">Join Waitlist</a>
-              <a class="btn secondary" href="#how-it-works">How It Works</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div id="siteFooter"></div>
+<div class="footerWrap">
+  <div id="siteFooter"></div>
+</div>
   </div>
-
   <script src="/assets/js/includes.js" defer></script>
   <script src="/assets/js/site.js" defer></script>
-
   <script>
     (function(){
-      // Simple waitlist UX (placeholder)
+      // Waitlist UX (placeholder)
       var form = document.getElementById("waitlistForm");
       var toast = document.getElementById("waitlistToast");
       function show(msg){
@@ -1018,65 +865,32 @@
         });
       }
 
-      // Mobile overlay wiring (works even if your injected header differs)
-      function openMenu(){
-        var o = document.getElementById("ddMobileOverlay");
-        if(!o) return;
-        o.hidden = false;
-        o.setAttribute("aria-hidden","false");
-        document.body.classList.add("dd-menu-open");
-      }
-      function closeMenu(){
-        var o = document.getElementById("ddMobileOverlay");
-        if(!o) return;
-        o.hidden = true;
-        o.setAttribute("aria-hidden","true");
-        document.body.classList.remove("dd-menu-open");
-      }
+      // Fallback include injector (ensures footer shows even if includes.js fails)
+      function injectIfEmpty(id, url){
+        var el = document.getElementById(id);
+        if(!el) return;
+        if(el.innerHTML && el.innerHTML.trim().length > 0) return;
 
-      var closeBtn = document.getElementById("ddMenuCloseBtn");
-      if(closeBtn) closeBtn.addEventListener("click", closeMenu);
-
-      var overlay = document.getElementById("ddMobileOverlay");
-      if(overlay){
-        overlay.addEventListener("click", function(ev){
-          if(ev.target === overlay) closeMenu();
-        });
-      }
-      document.addEventListener("keydown", function(ev){
-        if(ev.key === "Escape") closeMenu();
-      });
-
-      // Try to bind to common hamburger triggers inside injected header:
-      // - #menuBtn
-      // - [data-menu-btn]
-      // - .menuBtn
-      function bindHamburger(){
-        var btn =
-          document.getElementById("menuBtn") ||
-          document.querySelector("[data-menu-btn]") ||
-          document.querySelector(".menuBtn");
-        if(btn && !btn.__ddBound){
-          btn.__ddBound = true;
-          btn.addEventListener("click", function(ev){
-            ev.preventDefault();
-            openMenu();
-          });
-        }
+        fetch(url, { cache: "no-store" })
+          .then(function(r){ return r.ok ? r.text() : ""; })
+          .then(function(html){
+            if(html && html.trim().length > 0){
+              el.innerHTML = html;
+            }
+          })
+          .catch(function(){});
       }
 
-      // Bind immediately and again after includes load
-      bindHamburger();
-      window.addEventListener("load", bindHamburger);
-      window.addEventListener("dd:includes:ready", bindHamburger);
+      function run(){
+        injectIfEmpty("siteHeader", "/assets/includes/header.html");
+        injectIfEmpty("siteFooter", "/assets/includes/footer.html");
+      }
 
-      // Close overlay when clicking a link
-      try{
-        var links = document.querySelectorAll("#ddMobileOverlay a");
-        for(var i=0;i<links.length;i++){
-          links[i].addEventListener("click", closeMenu);
-        }
-      }catch(e){}
+      if(document.readyState === "loading"){
+        document.addEventListener("DOMContentLoaded", run);
+      }else{
+        run();
+      }
     })();
   </script>
 </body>
