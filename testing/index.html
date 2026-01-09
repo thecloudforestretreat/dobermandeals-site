@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="Doberman Deals | Monthly Curated Doberman Subscription Box" />
   <meta name="twitter:description" content="A monthly curated box of Doberman gear, toys, treats, and decor. Coming soon. Watch the teaser video and stay tuned." />
   <meta name="twitter:image" content="https://dobermandeals.com/og-dd.jpg" />
-  <!-- Favicons (approved root paths) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
@@ -43,7 +43,6 @@
       --dd-gold:#FFC107;
       --dd-ink: rgba(255,255,255,0.92);
       --dd-muted: rgba(255,255,255,0.74);
-      --dd-line: rgba(255,255,255,0.14);
       --dd-card: rgba(15,15,16,0.86);
       --dd-shadow: 0 18px 60px rgba(0,0,0,0.55);
       --dd-shadow2: 0 12px 30px rgba(0,0,0,0.45);
@@ -346,5 +345,34 @@
   </div>
   <script src="/assets/js/includes.js" defer></script>
   <script src="/assets/js/site.js" defer></script>
+  <script>
+    (function(){
+      function injectIfEmpty(id, url){
+        var el = document.getElementById(id);
+        if(!el) return;
+        if(el.innerHTML && el.innerHTML.trim().length > 0) return;
+
+        fetch(url, { cache: "no-store" })
+          .then(function(r){ return r.ok ? r.text() : ""; })
+          .then(function(html){
+            if(html && html.trim().length > 0){
+              el.innerHTML = html;
+            }
+          })
+          .catch(function(){});
+      }
+
+      function run(){
+        injectIfEmpty("siteHeader", "/assets/includes/header.html");
+        injectIfEmpty("siteFooter", "/assets/includes/footer.html");
+      }
+
+      if(document.readyState === "loading"){
+        document.addEventListener("DOMContentLoaded", run);
+      }else{
+        run();
+      }
+    })();
+  </script>
 </body>
 </html>
