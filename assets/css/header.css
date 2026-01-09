@@ -1,0 +1,123 @@
+/* /assets/css/header.css */
+
+.ddHeader{
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.30);
+}
+
+.ddHeaderInner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 12px 12px;
+}
+
+.ddBrand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+  min-width: 0;
+}
+
+.ddBrandLogo{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.ddBrandText{
+  font-weight: 950;
+  letter-spacing: .2px;
+  white-space: nowrap;
+  color: rgba(255,255,255,.92);
+}
+
+.ddNav{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+
+.ddNavLink{
+  text-decoration:none;
+  font-weight: 800;
+  font-size: 13.5px;
+  color: rgba(255,255,255,.82);
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: background .12s ease, border-color .12s ease;
+  white-space: nowrap;
+}
+
+.ddNavLink:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+}
+
+.ddNavLinkStrong{
+  color: rgba(0,0,0,.92);
+  background: linear-gradient(135deg, rgba(230,57,70,.95), rgba(255,193,7,.55));
+  border-color: rgba(255,255,255,.16);
+}
+
+.ddNavLinkGhost{
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+}
+
+.ddBurger{
+  display:none;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  cursor:pointer;
+  padding: 0;
+}
+
+.ddBurgerBar{
+  display:block;
+  width: 18px;
+  height: 2px;
+  background: rgba(255,255,255,.85);
+  margin: 4px auto;
+  border-radius: 999px;
+}
+
+.ddMobile{
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding: 10px 12px 12px;
+}
+
+.ddMobileLinks{
+  display:grid;
+  gap: 8px;
+}
+
+.ddMobileLink{
+  text-decoration:none;
+  font-weight: 900;
+  color: rgba(255,255,255,.85);
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+}
+
+@media (max-width: 900px){
+  .ddNav{ display:none; }
+  .ddBurger{ display:inline-flex; align-items:center; justify-content:center; }
+}
