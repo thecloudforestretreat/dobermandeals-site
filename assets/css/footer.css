@@ -1,0 +1,6 @@
+.ddFooter{margin-top:18px}
+.ddFooterInner{border-radius:28px;border:1px solid rgba(255,255,255,.12);background:rgba(15,15,16,.55);padding:16px;display:grid;gap:10px;justify-items:center}
+.ddSocial{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.ddSocial a{width:44px;height:44px;border-radius:14px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06)}
+.ddSocial img{width:22px;height:22px}
+.ddFooterMeta{font-size:13px;color:rgba(255,255,255,.7);font-weight:900}
