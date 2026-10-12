@@ -10,8 +10,8 @@
 @layer tokens {
  :root{
   color-scheme:light;
-  --dd-black:#111214;--dd-red:#a61f2c;--dd-gold:#ffc107;--dd-blue:#1d3557;
-  --dd-bg:#f6f4f0;--dd-surface:#fff;--dd-ink:#1c2025;--dd-muted:#535c66;--dd-line:#c9ced3;
+  --dd-black:#000000;--dd-red:#e63946;--dd-gold:#ffc107;--dd-blue:#1d3557;
+  --dd-bg:#ffffff;--dd-surface:#fff;--dd-ink:#10151c;--dd-muted:#515b65;--dd-line:#c9ced3;
   --dd-link:#173f70;--dd-focus:#164fc2;--dd-alert-bg:#fff3d6;--dd-alert-ink:#593c06;
   --dd-font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --dd-text-sm:.875rem;--dd-text-base:1.0625rem;--dd-text-lg:1.25rem;
