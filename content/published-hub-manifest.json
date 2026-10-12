@@ -120,6 +120,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/living-with-dobermans/",
+    "language": "en",
+    "pair_id": "DD-010",
+    "topic_cluster": "living",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/",
+    "language": "es",
+    "pair_id": "DD-010",
+    "topic_cluster": "living",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/",
+    "language": "en",
+    "pair_id": "DD-011",
+    "topic_cluster": "adoption",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/",
+    "language": "es",
+    "pair_id": "DD-011",
+    "topic_cluster": "adoption",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/",
+    "language": "en",
+    "pair_id": "DD-012",
+    "topic_cluster": "gear",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/",
+    "language": "es",
+    "pair_id": "DD-012",
+    "topic_cluster": "gear",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/",
     "language": "en",
     "pair_id": "DD-015",
@@ -173,6 +233,26 @@
     "page_path": "/es/doberman/primerizos/",
     "language": "es",
     "pair_id": "DD-018",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/lifespan/",
+    "language": "en",
+    "pair_id": "DD-024",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/esperanza-de-vida/",
+    "language": "es",
+    "pair_id": "DD-024",
     "topic_cluster": "breed",
     "template_type": "guide",
     "published": true,
@@ -253,6 +333,46 @@
     "page_path": "/es/cachorros/socializacion/",
     "language": "es",
     "pair_id": "DD-029",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/biting-and-teething/",
+    "language": "en",
+    "pair_id": "DD-030",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/mordidas-y-denticion/",
+    "language": "es",
+    "pair_id": "DD-030",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/vet-visit-checklist/",
+    "language": "en",
+    "pair_id": "DD-033",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/primera-visita-veterinaria/",
+    "language": "es",
+    "pair_id": "DD-033",
     "topic_cluster": "puppies",
     "template_type": "guide",
     "published": true,
@@ -495,6 +615,126 @@
     "pair_id": "DD-084",
     "topic_cluster": "exercise",
     "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/children/",
+    "language": "en",
+    "pair_id": "DD-089",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/ninos/",
+    "language": "es",
+    "pair_id": "DD-089",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/home-safety/",
+    "language": "en",
+    "pair_id": "DD-092",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/seguridad-en-casa/",
+    "language": "es",
+    "pair_id": "DD-092",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/rescue-adoption/",
+    "language": "en",
+    "pair_id": "DD-097",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/adoptar/",
+    "language": "es",
+    "pair_id": "DD-097",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/responsible-breeder-checklist/",
+    "language": "en",
+    "pair_id": "DD-098",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/lista-criador-responsable/",
+    "language": "es",
+    "pair_id": "DD-098",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/health-testing/",
+    "language": "en",
+    "pair_id": "DD-099",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/pruebas-de-salud/",
+    "language": "es",
+    "pair_id": "DD-099",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/harness-fit/",
+    "language": "en",
+    "pair_id": "DD-103",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/ajuste-del-arnes/",
+    "language": "es",
+    "pair_id": "DD-103",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
     "published": true,
     "delivery_environment": "staging",
     "editorial_release": "pending"
