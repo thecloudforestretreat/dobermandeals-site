@@ -39,7 +39,7 @@
   }
 
   // Legacy landing-page fonts. The hub uses the shared system-font stack.
-  if (!document.querySelector('link[href="/assets/css/hub-site.css"]')) {
+  if (!document.querySelector('link[href^="/assets/css/hub-site.css"]')) {
   addLink("preconnect", "https://fonts.googleapis.com");
   addLink("preconnect", "https://fonts.gstatic.com", { crossorigin: "" });
 

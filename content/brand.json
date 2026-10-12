@@ -1,0 +1,14 @@
+{
+  "name": "Doberman Deals",
+  "direction": "Bold canine editorial: confident, useful and welcoming",
+  "palette": {"black":"#000000","red":"#E63946","gold":"#FFC107","navy":"#1D3557","gray":"#6C757D","white":"#FFFFFF"},
+  "typography": {"display":"Bebas Neue","body":"Roboto"},
+  "socials": [
+    {"name":"Instagram","url":"https://www.instagram.com/dobermandeals","icon":"dd_ig.png"},
+    {"name":"TikTok","url":"https://www.tiktok.com/@dobermandeals","icon":"dd_tt.png"},
+    {"name":"Facebook","url":"https://www.facebook.com/DobermanDeal","icon":"dd_fb.png"},
+    {"name":"X","url":"https://x.com/doberman_deals","icon":"dd_x.png"},
+    {"name":"YouTube","url":"https://www.youtube.com/@DobermanDeals","icon":"dd_yt.png"},
+    {"name":"Google Reviews","url":"https://g.page/r/CSedxeJNJUCcEAE/review","icon":"dd_gr.png"}
+  ]
+}
