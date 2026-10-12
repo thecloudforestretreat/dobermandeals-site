@@ -791,6 +791,8 @@
           <input class="input" type="email" name="email" placeholder="you@example.com" required />
         </label>
         <button class="btn primary" type="submit">Notify Me</button>
+        <label style="grid-column:1/-1"><input type="checkbox" name="consent" required> I agree to receive Doberman Deals launch updates by email. <a href="/privacy/">Privacy notice</a></label>
+        <div style="grid-column:1/-1" class="cf-turnstile" data-sitekey="0x4AAAAAAFUoea6FuYPHMyRz" data-action="waitlist"></div>
       </form>
       <div class="toast" id="waitlistToast" aria-live="polite"></div>
     </div>
@@ -845,26 +847,10 @@
   </div>
   <script src="/assets/js/includes.js" defer></script>
   <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/waitlist.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
     (function(){
-      // Waitlist UX (placeholder)
-      var form = document.getElementById("waitlistForm");
-      var toast = document.getElementById("waitlistToast");
-      function show(msg){
-        if(!toast) return;
-        toast.textContent = msg;
-        toast.style.display = "block";
-        clearTimeout(window.__ddToastT);
-        window.__ddToastT = setTimeout(function(){ toast.style.display = "none"; }, 2200);
-      }
-      if(form){
-        form.addEventListener("submit", function(e){
-          e.preventDefault();
-          show("Thanks. You are on the list.");
-          try{ form.reset(); }catch(err){}
-        });
-      }
-
       // Fallback include injector (ensures footer shows even if includes.js fails)
       function injectIfEmpty(id, url){
         var el = document.getElementById(id);

@@ -1,0 +1,8 @@
+https://staging.dobermandeals.com/*
+  X-Robots-Tag: noindex, nofollow
+
+https://dobermandeals-site.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+/testing/*
+  X-Robots-Tag: noindex, nofollow

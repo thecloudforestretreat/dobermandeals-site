@@ -47,30 +47,22 @@
     "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
   );
 
-  // GA4
-  (function injectGA4() {
-    var MEASUREMENT_ID = "G-FGX9MBEM2R";
-
-    try {
-      if (typeof window.gtag === "function") return;
-
-      var existing = HEAD.querySelector(
-        'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
-      );
-      if (existing) return;
-
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function () {
-        window.dataLayer.push(arguments);
-      };
-
-      addScript(
-        "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(MEASUREMENT_ID),
-        { async: true }
-      );
-
-      window.gtag("js", new Date());
-      window.gtag("config", MEASUREMENT_ID, { anonymize_ip: true });
-    } catch (e) {}
-  })();
+  // Production analytics is managed in GTM. Do not count previews or staging.
+  if (["dobermandeals.com", "www.dobermandeals.com"].indexOf(location.hostname) !== -1 &&
+      location.pathname.indexOf("/testing") !== 0) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+    addScript("https://www.googletagmanager.com/gtm.js?id=GTM-TSFMW3ZV", { async: true });
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest("a");
+      if (!link) return;
+      var url = new URL(link.href, location.href);
+      if (url.origin !== location.origin && /^https?:$/.test(url.protocol)) {
+        window.gtag("event", "outbound_click", { link_domain: url.hostname });
+      } else if (url.pathname === "/subscribe/") {
+        window.gtag("event", "subscribe_click");
+      }
+    });
+  }
 })();
