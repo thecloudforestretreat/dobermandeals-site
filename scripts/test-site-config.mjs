@@ -21,8 +21,10 @@ assert.equal(w.DDContact.whatsappUrl('en'),null);
 assert.ok(Object.isFrozen(w.DD_SITE_CONFIG.contact.whatsapp));
 assert.equal(production.nodes.filter(n=>/gtm\.js/.test(n.src||'')).length,1);
 const initial=w.dataLayer.length;vm.runInContext(head,production.context);assert.equal(w.dataLayer.length,initial);
+assert.equal(w.dataLayer[0].content_language,'en');assert.equal(w.dataLayer[0].language,undefined);
 w.DDAnalytics.track('generate_lead',{form_id:'waitlistForm',method:'waitlist',email:'fixture@example.com',token:'not-allowed'});
 const event=w.dataLayer.at(-1);assert.equal(event[1],'generate_lead');assert.equal(event[2].pair_id,'DD-001');assert.equal(event[2].email,undefined);assert.equal(event[2].token,undefined);
+assert.equal(event[2].content_language,'en');assert.equal(event[2].language,undefined);
 w.DDAnalytics.track('directory_outbound',{resource_id:'https://example.com/?email=fixture@example.com'});assert.equal(w.dataLayer.at(-1)[2].resource_id,undefined);
 const previous=w.dataLayer.length;w.DDAnalytics.track('unapproved_event',{email:'fixture@example.com'});assert.equal(w.dataLayer.length,previous);
 for(const [host,p,noindex] of [['staging.dobermandeals.com','/',false],['abc.dobermandeals-site.pages.dev','/',false],['127.0.0.1','/',false],['dobermandeals.com','/testing/',false],['dobermandeals.com','/missing/',true]]) {

@@ -37,8 +37,10 @@ Production hosts only receive Google tracking. Preview, staging, `/testing` and
 HTML marked `noindex` are excluded. Set `data-pair-id`, `data-topic-cluster` and
 `data-template-type` on each generated page's `<html>` element. Set `lang="en"`
 or `lang="es"`. `head.js` makes these context values available before GTM loads.
-GA4 has event-scoped definitions for `language`, `pair_id`, `topic_cluster` and
+GA4 has event-scoped definitions for `content_language`, `pair_id`, `topic_cluster` and
 `template_type`.
+Use `content_language` for the page language; `language` is treated by Google as
+the standard browser-language setting and must not be overridden for this purpose.
 
 Use `DDAnalytics.track(eventName, controlledIdentifiers)` for implemented hub
 interactions. The allowed parameter list excludes emails, tokens, free text and

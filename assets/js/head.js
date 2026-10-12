@@ -58,7 +58,7 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     var html = document.documentElement;
     var context = {
-      language: (html.lang || "en").split("-")[0],
+      content_language: (html.lang || "en").split("-")[0],
       pair_id: html.getAttribute("data-pair-id") || "unassigned",
       topic_cluster: html.getAttribute("data-topic-cluster") || "unassigned",
       template_type: html.getAttribute("data-template-type") || "unassigned"
@@ -98,7 +98,7 @@
           item_id: link.getAttribute("data-item-id"), content_type: link.getAttribute("data-content-type"),
           resource_id: link.getAttribute("data-resource-id"), resource_category: link.getAttribute("data-resource-category"),
           product_id: link.getAttribute("data-product-id"), partner_id: link.getAttribute("data-partner-id"),
-          from_language: context.language, to_language: link.getAttribute("hreflang")
+          from_language: context.content_language, to_language: link.getAttribute("hreflang")
         });
       } else if (url.hostname === "wa.me" || url.hostname === "api.whatsapp.com") {
         window.DDAnalytics.track("whatsapp_click");
