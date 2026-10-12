@@ -52,6 +52,10 @@ for row in selected:
  checks=''
  if c['checklist']:
   checks=f'<section class="dd-checklist" data-checklist><h2>{L["check"]}</h2><p>{L["checkhelp"]}</p>'+''.join(f'<label><input type="checkbox"> <span>{H(item)}</span></label>' for item in c['checklist'])+'<p class="dd-checklist-status" data-checklist-status role="status" aria-live="polite"></p></section>'
+ if c['checklist']:
+  notes_title='Notes for your next step' if lang=='en' else 'Notas para tu próximo paso'
+  notes_help='Add a brief note beside each task, then print this guide. These notes stay in this page and are not saved or sent.' if lang=='en' else 'Añade una nota junto a cada tarea e imprime la guía. Las notas permanecen en esta página, sin guardarse ni enviarse.'
+  checks+='<section class="dd-owner-notes"><h2>'+notes_title+'</h2><p>'+notes_help+'</p>'+''.join('<label for="note-'+str(i)+'">'+H(item)+'</label><textarea id="note-'+str(i)+'" rows="2" maxlength="400"></textarea>' for i,item in enumerate(c['checklist']))+'</section>'
  if is_hub:
   hero=f'<section class="dd-hub-hero"><div class="dd-hero-copy"><p class="dd-kicker">{"Life with a Doberman" if lang=="en" else "La vida con un dóberman"}</p><h1>{H(t)}</h1><p class="dd-hero-lead">{H(intro)}</p><div class="dd-hero-buttons"><a class="dd-button" href="{link("DD-026",lang)}">{L["start"]}</a><a class="dd-button dd-button-secondary" href="{link("DD-034",lang)}">{L["learn"]}</a></div></div>{img_html(img,lang,True)}</section>'+credit(img,lang)
   featured=['DD-026','DD-028','DD-034'] if num==1 else [x for x in subj if x!=k and by[(x,lang)]['topic_cluster']==row['topic_cluster']]
