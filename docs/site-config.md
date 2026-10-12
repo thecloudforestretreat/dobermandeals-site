@@ -61,7 +61,11 @@ python3 scripts/check-hub-links.py dist content/published-hub-manifest.json
 ```
 
 The manifest contains `page_path`, `language` and `published: true` only for
-pages actually included in the release. The check reads rendered `<main>`
+pages actually included in the release, plus `pair_id`, `topic_cluster` and
+`template_type`. When this manifest exists, the build copies each published
+page's actual HTML, fills its analytics attributes, injects the shared scripts
+and automatically runs the six-link check. It stops the release if links fail.
+Source HTML must already have the correct language. The check reads rendered `<main>`
 anchors, ignores global nav/footer, requires self-canonicals and rejects
 noindex/nofollow pages. Follow it with a production HTTP crawl and GSC checks.
 The current three-page coming-soon site cannot meet a six-link hub minimum;
@@ -74,6 +78,7 @@ node scripts/build.mjs
 node scripts/test-site-config.mjs
 node scripts/test-waitlist.mjs
 python3 scripts/test-hub-links.py
+python3 scripts/test-hub-build.py
 ```
 
 Hub quality remains gated by original useful content, appropriate expert review,
