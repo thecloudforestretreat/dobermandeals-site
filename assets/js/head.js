@@ -38,7 +38,8 @@
     return s;
   }
 
-  // Fonts
+  // Legacy landing-page fonts. The hub uses the shared system-font stack.
+  if (!document.querySelector('link[href="/assets/css/hub-site.css"]')) {
   addLink("preconnect", "https://fonts.googleapis.com");
   addLink("preconnect", "https://fonts.gstatic.com", { crossorigin: "" });
 
@@ -46,6 +47,7 @@
     "stylesheet",
     "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
   );
+  }
 
   // Production analytics is managed in GTM, with IDs controlled centrally.
   var config = window.DD_SITE_CONFIG;

@@ -1,0 +1,9 @@
+@layer cluster{
+ .dd-commerce-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}
+ .dd-offer{background:var(--dd-black);color:#fff;padding:2rem;border-radius:var(--dd-radius)}
+ .dd-offer .dd-kicker{color:var(--dd-gold)}.dd-availability{font-size:.875rem;font-weight:700;color:var(--dd-muted)}
+ .dd-waitlist{background:#fff;border:1px solid var(--dd-line);padding:2rem;border-radius:var(--dd-radius)}
+ .dd-waitlist .dd-field{display:grid;gap:.35rem;margin-block:1rem}.dd-waitlist input[type=email]{width:100%}
+ .dd-consent{display:flex;align-items:start;gap:.6rem;font-weight:400;font-size:.875rem}.dd-consent input{margin-block-start:.4rem}
+ @media(max-width:45rem){.dd-commerce-layout{grid-template-columns:1fr}}
+}

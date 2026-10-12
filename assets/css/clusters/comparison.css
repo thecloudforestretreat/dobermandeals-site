@@ -1,0 +1,8 @@
+@import url("article.css");
+@layer cluster{
+ .dd-methodology{border:1px solid var(--dd-line);background:#fff;padding:1.25rem;border-radius:var(--dd-radius)}
+ .dd-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1.5rem;align-items:start}
+ .dd-disclosure{font-size:.875rem;color:var(--dd-muted);border-block:1px solid var(--dd-line);padding-block:.75rem}
+ .dd-measurements{font-variant-numeric:tabular-nums}
+ @media(max-width:40rem){.dd-product{grid-template-columns:1fr}}
+}

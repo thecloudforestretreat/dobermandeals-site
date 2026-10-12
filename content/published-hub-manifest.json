@@ -1,0 +1,382 @@
+[
+  {
+    "page_path": "/",
+    "language": "en",
+    "pair_id": "DD-001",
+    "topic_cluster": "home",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/",
+    "language": "es",
+    "pair_id": "DD-001",
+    "topic_cluster": "home",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/",
+    "language": "en",
+    "pair_id": "DD-002",
+    "topic_cluster": "breed",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/",
+    "language": "es",
+    "pair_id": "DD-002",
+    "topic_cluster": "breed",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/",
+    "language": "en",
+    "pair_id": "DD-003",
+    "topic_cluster": "puppies",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/",
+    "language": "es",
+    "pair_id": "DD-003",
+    "topic_cluster": "puppies",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/",
+    "language": "en",
+    "pair_id": "DD-004",
+    "topic_cluster": "training",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/",
+    "language": "es",
+    "pair_id": "DD-004",
+    "topic_cluster": "training",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/",
+    "language": "en",
+    "pair_id": "DD-015",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/",
+    "language": "es",
+    "pair_id": "DD-015",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/temperament/",
+    "language": "en",
+    "pair_id": "DD-017",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/temperamento/",
+    "language": "es",
+    "pair_id": "DD-017",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/first-time-owners/",
+    "language": "en",
+    "pair_id": "DD-018",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/primerizos/",
+    "language": "es",
+    "pair_id": "DD-018",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/first-week-home/",
+    "language": "en",
+    "pair_id": "DD-026",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/primera-semana/",
+    "language": "es",
+    "pair_id": "DD-026",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/supplies-checklist/",
+    "language": "en",
+    "pair_id": "DD-027",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/lista-de-materiales/",
+    "language": "es",
+    "pair_id": "DD-027",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/daily-schedule/",
+    "language": "en",
+    "pair_id": "DD-028",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/rutina-diaria/",
+    "language": "es",
+    "pair_id": "DD-028",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/reward-based-foundations/",
+    "language": "en",
+    "pair_id": "DD-034",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/bases-con-refuerzo-positivo/",
+    "language": "es",
+    "pair_id": "DD-034",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/potty-training/",
+    "language": "en",
+    "pair_id": "DD-035",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/hacer-sus-necesidades/",
+    "language": "es",
+    "pair_id": "DD-035",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/crate-training/",
+    "language": "en",
+    "pair_id": "DD-036",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/habituacion-a-la-jaula/",
+    "language": "es",
+    "pair_id": "DD-036",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/editorial-policy/",
+    "language": "en",
+    "pair_id": "DD-121",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/politica-editorial/",
+    "language": "es",
+    "pair_id": "DD-121",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/review-process/",
+    "language": "en",
+    "pair_id": "DD-122",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/proceso-de-revision/",
+    "language": "es",
+    "pair_id": "DD-122",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/contact/",
+    "language": "en",
+    "pair_id": "DD-124",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/contacto/",
+    "language": "es",
+    "pair_id": "DD-124",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/affiliate-disclosure/",
+    "language": "en",
+    "pair_id": "DD-125",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/divulgacion-de-afiliados/",
+    "language": "es",
+    "pair_id": "DD-125",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/privacy/",
+    "language": "en",
+    "pair_id": "DD-126",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/privacidad/",
+    "language": "es",
+    "pair_id": "DD-126",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/about/terms/",
+    "language": "en",
+    "pair_id": "DD-127",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/condiciones/",
+    "language": "es",
+    "pair_id": "DD-127",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  }
+]

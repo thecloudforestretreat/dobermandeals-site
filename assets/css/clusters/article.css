@@ -1,0 +1,7 @@
+@layer cluster{
+ .dd-article-layout{display:grid;grid-template-columns:minmax(0,1fr) 17rem;gap:3rem;align-items:start;max-width:70rem}
+ .dd-article-header{max-width:var(--dd-reading);padding-block:1.5rem 2rem}.dd-article-header>*+*{margin-block-start:1rem}
+ .dd-article-header h1{font-size:clamp(2rem,4vw,3.25rem)}
+ .dd-sources{font-size:.95rem;border-block-start:1px solid var(--dd-line);padding-block-start:1.5rem}
+ @media(max-width:60rem){.dd-article-layout{grid-template-columns:1fr}.dd-toc{max-width:var(--dd-reading)}}
+}

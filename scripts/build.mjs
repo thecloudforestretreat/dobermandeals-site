@@ -1,5 +1,14 @@
 import { cp, mkdir, rm, readdir, readFile, writeFile } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
+if (process.env.CF_PAGES_BRANCH === 'main') {
+  const manifest = JSON.parse(await readFile('content/published-hub-manifest.json', 'utf8').catch(error => {
+    if (error.code === 'ENOENT') return '[]';
+    throw error;
+  }));
+  if (manifest.some(page => page.published && page.editorial_release !== 'approved')) {
+    throw new Error('Hub content requires editorial release approval before a production build.');
+  }
+}
 await rm('dist', { recursive: true, force: true });
 await mkdir('dist');
 for (const path of ['assets', 'subscribe', 'testing', 'privacy', 'index.html', '404.html', 'robots.txt', 'sitemap.xml', '_headers', '_redirects', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png', 'og-dd.jpg', 'site.webmanifest']) {
@@ -49,4 +58,24 @@ if (hubPages.length) {
   const check = spawnSync('python3', ['scripts/check-hub-links.py', 'dist', hubManifestPath], { stdio: 'inherit' });
   if (check.error) throw check.error;
   if (check.status !== 0) throw new Error('Hub release blocked: contextual link minimums failed.');
+}
+// Preview deployments keep crawlable links for QA but cannot enter search results.
+if (process.env.CF_PAGES_BRANCH && process.env.CF_PAGES_BRANCH !== 'main') {
+  async function protectPreview(directory) {
+    for (const entry of await readdir(directory, { withFileTypes: true })) {
+      const file = directory + '/' + entry.name;
+      if (entry.isDirectory()) { await protectPreview(file); continue; }
+      if (!entry.name.endsWith('.html')) continue;
+      let html = await readFile(file, 'utf8');
+      if (!/<head[\s>]/i.test(html)) continue;
+      html = html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi, '');
+      html = html.replace(/<\/head>/i, '<meta name="robots" content="noindex, nofollow"></head>');
+      html = html.replaceAll('https://dobermandeals.com', 'https://staging.dobermandeals.com');
+      await writeFile(file, html);
+    }
+  }
+  await protectPreview('dist');
+  await writeFile('dist/robots.txt', 'User-agent: *\nDisallow: /\n');
+  await writeFile('dist/sitemap.xml', (await readFile('dist/sitemap.xml', 'utf8')).replaceAll('https://dobermandeals.com', 'https://staging.dobermandeals.com'));
+  await rm('dist/testing', { recursive: true, force: true });
 }

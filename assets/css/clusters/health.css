@@ -1,0 +1,6 @@
+@import url("article.css");
+@layer cluster{
+ .dd-review-panel{border-inline-start:4px solid var(--dd-blue);padding:1rem 1.25rem;background:#fff;border-radius:0 var(--dd-radius) var(--dd-radius) 0;font-size:.95rem}
+ .dd-emergency{border:2px solid var(--dd-red);background:#fff0f1;padding:1.25rem;border-radius:var(--dd-radius)}
+ .dd-evidence-label{font-size:.8rem;font-weight:750;color:var(--dd-blue)}
+}

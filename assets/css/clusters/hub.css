@@ -1,0 +1,9 @@
+@layer cluster{
+ .dd-hub-hero{background:var(--dd-black);color:#fff;padding:clamp(2rem,6vw,5rem);border-radius:var(--dd-radius);display:grid;gap:2rem;grid-template-columns:1.5fr 1fr;align-items:center}
+ .dd-hub-hero h1{max-width:16ch}.dd-hub-hero p{max-width:55ch;color:#dce0e5}.dd-hub-hero .dd-kicker{color:var(--dd-gold)}
+ .dd-hub-hero .dd-card{background:#202329;border-color:#50555d;color:#fff}
+ .dd-hub-hero a{color:#fff}.dd-hub-hero .dd-button{background:var(--dd-gold);border-color:var(--dd-gold);color:#111}
+ .dd-hub-hero :focus-visible{outline-color:var(--dd-gold)}
+ .dd-topic-meta{font-size:.8rem;color:var(--dd-muted)}
+ @media(max-width:48rem){.dd-hub-hero{grid-template-columns:1fr}.dd-hub-hero h1{max-width:22ch}}
+}

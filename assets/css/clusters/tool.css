@@ -1,0 +1,7 @@
+@layer cluster{
+ .dd-tool{max-width:48rem;background:#fff;border:1px solid var(--dd-line);padding:clamp(1rem,3vw,2rem);border-radius:var(--dd-radius)}
+ .dd-tool-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.25rem}
+ .dd-tool .dd-field{display:grid;gap:.35rem}.dd-result{background:#edf3fa;padding:1.25rem;border-radius:var(--dd-radius);margin-block-start:1.5rem}
+ .dd-checklist{list-style:none;padding:0}.dd-checklist label{display:flex;gap:.75rem;padding-block:.75rem;border-block-end:1px solid var(--dd-line);font-weight:500}
+ .dd-validation{color:var(--dd-red);font-weight:650;font-size:.95rem}
+}

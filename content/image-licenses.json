@@ -1,0 +1,43 @@
+[
+  {
+    "title": "File:Doberman Pinscher.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Doberman_Pinscher.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Doberman_Pinscher.jpg",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Willitorivera&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Willitorivera (page does not exist)\">Willitorivera</a>",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "4 month old female doberman pinscher",
+    "local_path": "/assets/images/hub/puppy.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Doberman_Pinscher.jpg/960px-Doberman_Pinscher.jpg",
+    "width": 960,
+    "height": 1706,
+    "changes": "Wikimedia resized derivative; displayed with a layout crop"
+  },
+  {
+    "title": "File:Obi portrait dobermann.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Obi_portrait_dobermann.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Obi_portrait_dobermann.jpg",
+    "author": "<a href=\"//www.flickr.com/people/38943802@N06\" class=\"extiw\" title=\"flickruser:38943802@N06\">Jack Berry</a>",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "description": "86mm iso400 1/60's f4.5",
+    "local_path": "/assets/images/hub/doberman-portrait.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Obi_portrait_dobermann.jpg/960px-Obi_portrait_dobermann.jpg",
+    "width": 960,
+    "height": 638,
+    "changes": "Wikimedia resized derivative; displayed with a layout crop"
+  },
+  {
+    "title": "File:Doberman with tail.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Doberman_with_tail.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Doberman_with_tail.jpg",
+    "author": "Tom Davenport",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "description": "",
+    "local_path": "/assets/images/hub/doberman-outdoors.jpg",
+    "width": 886,
+    "height": 738,
+    "changes": "Displayed with a layout crop"
+  }
+]

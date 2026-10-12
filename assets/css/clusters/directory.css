@@ -1,0 +1,7 @@
+@layer cluster{
+ .dd-directory-controls{display:flex;align-items:end;gap:1rem;flex-wrap:wrap;margin-block:1.5rem}
+ .dd-directory-controls .dd-field{flex:1 1 14rem}.dd-directory-controls input,.dd-directory-controls select{width:100%}
+ .dd-resource-meta{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.875rem;color:var(--dd-muted)}
+ .dd-verification{font-size:.875rem;font-weight:650;color:var(--dd-blue)}
+ .dd-empty-state{padding:2rem;border:1px dashed var(--dd-muted);border-radius:var(--dd-radius);background:#fff}
+}

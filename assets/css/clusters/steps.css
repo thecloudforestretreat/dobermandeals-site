@@ -1,0 +1,7 @@
+@import url("article.css");
+@layer cluster{
+ .dd-steps{counter-reset:dd-step;list-style:none;padding:0}
+ .dd-steps>li{counter-increment:dd-step;border-block-start:1px solid var(--dd-line);padding-block:1.5rem}
+ .dd-steps h2::before{content:counter(dd-step) ". ";color:var(--dd-red)}
+ .dd-step-result{background:#edf3fa;padding:.75rem 1rem;font-size:.95rem;border-radius:.4rem;margin-block-start:1rem}
+}
