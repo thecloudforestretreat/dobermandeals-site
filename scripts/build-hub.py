@@ -44,7 +44,7 @@ manifest=[]
 for row in selected:
  k=row['pair_id'];num=int(k[-3:]);lang=row['language'];L=LABELS[lang];c=COPY[k][lang];t=c['title'];intro=c['intro'];url=ORIGIN+row['page_path'];other=ORIGIN+row['counterpart_path'];is_hub=row['template_type']=='hub';is_trust=row['topic_cluster']=='trust';img=image_for(row)
  desc=intro if len(intro)<=170 else intro[:167].rsplit(' ',1)[0]+'.'
- bread=f'<div class="dd-breadcrumb"><a href="{link("DD-001",lang)}">{L["home"]}</a><span aria-hidden="true">/</span><span>{H(t)}</span></div>' if num!=1 else ''
+ bread=f'<nav class="dd-breadcrumb" aria-label="{"Breadcrumb" if lang=="en" else "Ruta de navegación"}"> <a href="{link("DD-001",lang)}">{L["home"]}</a><span aria-hidden="true">/</span><span>{H(t)}</span></nav>' if num!=1 else ''
  sections=''.join(f'<section id="section-{i+1}"><h2>{H(h)}</h2><p>{H(p)}</p></section>' for i,(h,p) in enumerate(c['sections']))
  source_html=''
  if num in SRC:
