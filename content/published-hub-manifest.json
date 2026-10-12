@@ -80,6 +80,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/behavior/",
+    "language": "en",
+    "pair_id": "DD-005",
+    "topic_cluster": "behavior",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/",
+    "language": "es",
+    "pair_id": "DD-005",
+    "topic_cluster": "behavior",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/",
+    "language": "en",
+    "pair_id": "DD-006",
+    "topic_cluster": "health",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/",
+    "language": "es",
+    "pair_id": "DD-006",
+    "topic_cluster": "health",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/",
+    "language": "en",
+    "pair_id": "DD-007",
+    "topic_cluster": "nutrition",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/",
+    "language": "es",
+    "pair_id": "DD-007",
+    "topic_cluster": "nutrition",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/grooming/",
     "language": "en",
     "pair_id": "DD-008",
@@ -520,6 +580,166 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/behavior/separation-distress/",
+    "language": "en",
+    "pair_id": "DD-046",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/ansiedad-por-separacion/",
+    "language": "es",
+    "pair_id": "DD-046",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/behavior/reactivity/",
+    "language": "en",
+    "pair_id": "DD-047",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/reactividad/",
+    "language": "es",
+    "pair_id": "DD-047",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/behavior/body-language/",
+    "language": "en",
+    "pair_id": "DD-050",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/lenguaje-corporal/",
+    "language": "es",
+    "pair_id": "DD-050",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/dilated-cardiomyopathy/",
+    "language": "en",
+    "pair_id": "DD-054",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/miocardiopatia-dilatada/",
+    "language": "es",
+    "pair_id": "DD-054",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/cardiac-screening/",
+    "language": "en",
+    "pair_id": "DD-055",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/pruebas-cardiacas/",
+    "language": "es",
+    "pair_id": "DD-055",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/preventive-care/",
+    "language": "en",
+    "pair_id": "DD-063",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/cuidados-preventivos/",
+    "language": "es",
+    "pair_id": "DD-063",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/feeding-guide/",
+    "language": "en",
+    "pair_id": "DD-066",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/guia-de-alimentacion/",
+    "language": "es",
+    "pair_id": "DD-066",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/body-condition/",
+    "language": "en",
+    "pair_id": "DD-068",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/condicion-corporal/",
+    "language": "es",
+    "pair_id": "DD-068",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/grooming/bathing/",
     "language": "en",
     "pair_id": "DD-075",
@@ -653,6 +873,26 @@
     "page_path": "/es/vivir-con-doberman/seguridad-en-casa/",
     "language": "es",
     "pair_id": "DD-092",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/cost-of-ownership/",
+    "language": "en",
+    "pair_id": "DD-095",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/coste-de-mantenimiento/",
+    "language": "es",
+    "pair_id": "DD-095",
     "topic_cluster": "living",
     "template_type": "guide",
     "published": true,
