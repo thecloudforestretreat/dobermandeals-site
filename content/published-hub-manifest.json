@@ -80,6 +80,46 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/grooming/",
+    "language": "en",
+    "pair_id": "DD-008",
+    "topic_cluster": "grooming",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/",
+    "language": "es",
+    "pair_id": "DD-008",
+    "topic_cluster": "grooming",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/",
+    "language": "en",
+    "pair_id": "DD-009",
+    "topic_cluster": "exercise",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/",
+    "language": "es",
+    "pair_id": "DD-009",
+    "topic_cluster": "exercise",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/",
     "language": "en",
     "pair_id": "DD-015",
@@ -200,6 +240,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/puppies/socialization/",
+    "language": "en",
+    "pair_id": "DD-029",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/socializacion/",
+    "language": "es",
+    "pair_id": "DD-029",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/training/reward-based-foundations/",
     "language": "en",
     "pair_id": "DD-034",
@@ -254,6 +314,186 @@
     "language": "es",
     "pair_id": "DD-036",
     "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/loose-leash-walking/",
+    "language": "en",
+    "pair_id": "DD-037",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/pasear-sin-tirar/",
+    "language": "es",
+    "pair_id": "DD-037",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/recall/",
+    "language": "en",
+    "pair_id": "DD-038",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/llamada/",
+    "language": "es",
+    "pair_id": "DD-038",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/basic-cues/",
+    "language": "en",
+    "pair_id": "DD-039",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/ordenes-basicas/",
+    "language": "es",
+    "pair_id": "DD-039",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/choosing-a-trainer/",
+    "language": "en",
+    "pair_id": "DD-044",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/elegir-adiestrador/",
+    "language": "es",
+    "pair_id": "DD-044",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/grooming/bathing/",
+    "language": "en",
+    "pair_id": "DD-075",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/bano/",
+    "language": "es",
+    "pair_id": "DD-075",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/grooming/brushing-and-shedding/",
+    "language": "en",
+    "pair_id": "DD-076",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/cepillado-y-muda/",
+    "language": "es",
+    "pair_id": "DD-076",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/grooming/nail-care/",
+    "language": "en",
+    "pair_id": "DD-077",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/unas/",
+    "language": "es",
+    "pair_id": "DD-077",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/daily-routine/",
+    "language": "en",
+    "pair_id": "DD-082",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/rutina-diaria/",
+    "language": "es",
+    "pair_id": "DD-082",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/mental-enrichment/",
+    "language": "en",
+    "pair_id": "DD-084",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/enriquecimiento-mental/",
+    "language": "es",
+    "pair_id": "DD-084",
+    "topic_cluster": "exercise",
     "template_type": "steps",
     "published": true,
     "delivery_environment": "staging",

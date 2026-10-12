@@ -19,3 +19,7 @@ body{font-family:var(--dd-font);background:#fff}h1,h2{font-family:var(--dd-displ
 @media print{.dd-header,.dd-footer,.dd-toc,.dd-related,.dd-hero-buttons,.dd-photo-credit,.dd-topic-strip{display:none}.dd-article-layout{display:block}.dd-container,.dd-prose{max-width:none}.dd-article-visual{display:none}body{background:white;color:black}h1,h2{font-family:Arial,sans-serif;font-size:1.5rem}a{color:black}.dd-checklist{break-inside:avoid;background:white}.dd-owner-notes textarea{border:1px solid #aaa;color:black;min-height:90px}}
 .dd-footer .dd-community-band p{color:#20252b;max-width:56ch;margin-top:.5rem}
 .dd-socials img[src$="dd_ig.png"],.dd-socials img[src$="dd_x.png"],.dd-socials img[src$="dd_yt.png"],.dd-socials img[src$="dd_gr.png"]{filter:invert(1)}
+.dd-guide-faq{margin-top:2.5rem}.dd-guide-faq h2{font-size:2rem}.dd-guide-faq details{border-top:1px solid var(--dd-line);padding:1rem 0}.dd-guide-faq summary{font-size:1rem;font-weight:700;color:var(--dd-blue);min-height:44px;display:list-item;align-content:center}.dd-guide-faq details p{margin-top:.9rem}
+@media(min-width:801px) and (max-width:1100px){.dd-header-inner{gap:.7rem}.dd-header nav{gap:.65rem}.dd-header nav a{font-size:.82rem}.dd-wordmark img{width:52px;height:52px}.dd-brand-name{font-size:1.8rem}.dd-brand-name span{font-size:1.2rem}}
+
+.dd-topic-hero h1{font-size:clamp(2.8rem,5vw,4.5rem);max-width:20ch}
