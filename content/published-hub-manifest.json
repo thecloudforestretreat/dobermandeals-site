@@ -380,6 +380,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/doberman/history-and-breed-standard/",
+    "language": "en",
+    "pair_id": "DD-023",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/historia-y-estandar/",
+    "language": "es",
+    "pair_id": "DD-023",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/doberman/lifespan/",
     "language": "en",
     "pair_id": "DD-024",
@@ -493,6 +513,46 @@
     "page_path": "/es/cachorros/mordidas-y-denticion/",
     "language": "es",
     "pair_id": "DD-030",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/growth-stages/",
+    "language": "en",
+    "pair_id": "DD-031",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/etapas-de-crecimiento/",
+    "language": "es",
+    "pair_id": "DD-031",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/puppies/sleep/",
+    "language": "en",
+    "pair_id": "DD-032",
+    "topic_cluster": "puppies",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/cachorros/sueno/",
+    "language": "es",
+    "pair_id": "DD-032",
     "topic_cluster": "puppies",
     "template_type": "guide",
     "published": true,
