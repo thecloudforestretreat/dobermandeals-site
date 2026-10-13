@@ -21,6 +21,7 @@ for (const failure of [{ success: false }, { ...check, hostname: 'other.example'
   check = failure;
   assert.equal((await onRequestPost({ request: request(valid), env })).status, 400);
 }
+assert.equal((await onRequestPost({ request: request({ ...valid, language: "fr" }), env })).status, 400);
 assert.equal(writes.length, 0);
 check = { success: true, hostname: 'dobermandeals.com', action: 'waitlist' };
 assert.equal((await onRequestPost({ request: request(valid), env })).status, 200);
@@ -28,9 +29,12 @@ assert.equal(writes.length, 1);
 assert.match(writes[0][0], /^signup:[a-f0-9]{64}$/);
 assert.equal(JSON.parse(writes[0][1]).email, valid.email);
 check = { success: true, hostname: 'staging.dobermandeals.com', action: 'waitlist' };
-assert.equal((await onRequestPost({ request: request(valid, 'https://staging.dobermandeals.com', 'staging.dobermandeals.com'), env })).status, 200);
+assert.equal((await onRequestPost({ request: request({ ...valid, language: 'es' }, 'https://staging.dobermandeals.com', 'staging.dobermandeals.com'), env })).status, 200);
 assert.match(writes[1][0], /^staging:/);
 assert.equal(writes[1][2].expirationTtl, 86400);
+assert.equal(JSON.parse(writes[1][1]).language, 'es');
+assert.equal(JSON.parse(writes[0][1]).language, 'en');
+assert.equal((await onRequestPost({ request: request({ ...valid, language: 'es' }, 'https://staging.dobermandeals.com', 'staging.dobermandeals.com'), env: { ...env, WAITLIST: { put: async () => { throw Error('storage unavailable'); } } } })).status, 503);
 globalThis.fetch = async () => { throw Error('fixture outage'); };
 assert.equal((await onRequestPost({ request: request(valid), env })).status, 503);
 globalThis.fetch = originalFetch;

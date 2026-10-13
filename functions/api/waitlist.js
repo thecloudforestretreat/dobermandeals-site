@@ -14,6 +14,7 @@ export async function onRequestPost({ request, env }) {
     data = JSON.parse(raw);
   } catch { return reply(400, "Invalid submission."); }
   if (!data || typeof data !== "object" || Array.isArray(data)) return reply(400, "Invalid submission.");
+  if (data.language !== undefined && !["en", "es"].includes(data.language)) return reply(400, "Invalid submission.");
   const email = typeof data.email === "string" ? data.email.trim().toLowerCase() : "";
   if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || data.consent !== true) return reply(400, "Enter a valid email and agree to launch updates.");
   if (typeof data.token !== "string" || !data.token || data.token.length > 2048) return reply(400, "Complete the security check.");
@@ -28,7 +29,7 @@ export async function onRequestPost({ request, env }) {
     if (!verified.success || verified.hostname !== url.hostname || verified.action !== "waitlist") return reply(400, "Security check expired. Please try again.");
     const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(email))), b => b.toString(16).padStart(2, "0")).join("");
     const prefix = url.hostname === "staging.dobermandeals.com" ? "staging:" : "signup:";
-    await env.WAITLIST.put(prefix + hash, JSON.stringify({ email, consent: true, consentVersion: "launch-updates-2026-10-12", submittedAt: new Date().toISOString() }), prefix === "staging:" ? { expirationTtl: 86400 } : {});
+    await env.WAITLIST.put(prefix + hash, JSON.stringify({ email, language: data.language || "en", consent: true, consentVersion: "launch-updates-2026-10-12", submittedAt: new Date().toISOString() }), prefix === "staging:" ? { expirationTtl: 86400 } : {});
     return reply(200, "Thanks. You are on the list.");
   } catch { return reply(503, "We could not save your signup. Please try again later."); }
 }

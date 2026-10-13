@@ -260,6 +260,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/subscription-box/",
+    "language": "en",
+    "pair_id": "DD-016",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/caja-de-suscripcion/",
+    "language": "es",
+    "pair_id": "DD-016",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/doberman/temperament/",
     "language": "en",
     "pair_id": "DD-017",
@@ -673,6 +693,26 @@
     "page_path": "/es/salud/pruebas-cardiacas/",
     "language": "es",
     "pair_id": "DD-055",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/bloat-emergency/",
+    "language": "en",
+    "pair_id": "DD-059",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/dilatacion-torsion-gastrica/",
+    "language": "es",
+    "pair_id": "DD-059",
     "topic_cluster": "health",
     "template_type": "health",
     "published": true,
@@ -1095,6 +1135,26 @@
     "pair_id": "DD-127",
     "topic_cluster": "trust",
     "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/subscription-box/waitlist/",
+    "language": "en",
+    "pair_id": "DD-129",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/caja-de-suscripcion/lista-de-espera/",
+    "language": "es",
+    "pair_id": "DD-129",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
     "published": true,
     "delivery_environment": "staging",
     "editorial_release": "pending"
