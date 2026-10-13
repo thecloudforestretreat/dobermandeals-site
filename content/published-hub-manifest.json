@@ -1120,6 +1120,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/health/skin-and-coat-problems/",
+    "language": "en",
+    "pair_id": "DD-061",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/problemas-de-piel/",
+    "language": "es",
+    "pair_id": "DD-061",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/health/preventive-care/",
     "language": "en",
     "pair_id": "DD-063",
@@ -1133,6 +1153,26 @@
     "page_path": "/es/salud/cuidados-preventivos/",
     "language": "es",
     "pair_id": "DD-063",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/senior-care/",
+    "language": "en",
+    "pair_id": "DD-064",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/cuidados-del-mayor/",
+    "language": "es",
+    "pair_id": "DD-064",
     "topic_cluster": "health",
     "template_type": "health",
     "published": true,
@@ -1913,6 +1953,26 @@
     "page_path": "/es/herramientas/calendario-cuidados/",
     "language": "es",
     "pair_id": "DD-118",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/tools/vet-questions/",
+    "language": "en",
+    "pair_id": "DD-120",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/preguntas-veterinarias/",
+    "language": "es",
+    "pair_id": "DD-120",
     "topic_cluster": "tools",
     "template_type": "tool",
     "published": true,

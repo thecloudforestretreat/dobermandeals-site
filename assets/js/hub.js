@@ -8,3 +8,10 @@
 })();
 
  document.querySelectorAll("[data-contact-email]").forEach(function(a){var e=window.DD_SITE_CONFIG?.contact.email;if(e){a.href="mailto:"+e;a.textContent=e;}});
+
+(function(){
+ const output=document.querySelector('[data-question-list]');if(!output)return;
+ const boxes=[...document.querySelectorAll('[data-checklist] input[type=checkbox]')],empty=document.querySelector('[data-question-empty]');
+ const render=()=>{output.replaceChildren();const selected=boxes.filter(b=>b.checked);empty.hidden=selected.length>0;selected.forEach(b=>{const item=document.createElement('li');item.textContent=b.closest('label').querySelector('span').textContent;output.appendChild(item);});};
+ boxes.forEach(b=>b.addEventListener('change',render));document.querySelector('[data-question-reset]').addEventListener('click',()=>{boxes.forEach(b=>{b.checked=false;b.dispatchEvent(new Event('change'));});boxes[0].focus();});render();
+})();
