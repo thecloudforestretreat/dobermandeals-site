@@ -860,6 +860,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/behavior/resource-guarding/",
+    "language": "en",
+    "pair_id": "DD-049",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/proteccion-de-recursos/",
+    "language": "es",
+    "pair_id": "DD-049",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/behavior/body-language/",
     "language": "en",
     "pair_id": "DD-050",
@@ -880,6 +900,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/behavior/fear-and-noise/",
+    "language": "en",
+    "pair_id": "DD-051",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/miedo-y-ruidos/",
+    "language": "es",
+    "pair_id": "DD-051",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/behavior/destructive-chewing/",
     "language": "en",
     "pair_id": "DD-052",
@@ -893,6 +933,26 @@
     "page_path": "/es/comportamiento/masticacion-destructiva/",
     "language": "es",
     "pair_id": "DD-052",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/behavior/sudden-behavior-change/",
+    "language": "en",
+    "pair_id": "DD-053",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/cambios-repentinos/",
+    "language": "es",
+    "pair_id": "DD-053",
     "topic_cluster": "behavior",
     "template_type": "guide",
     "published": true,
