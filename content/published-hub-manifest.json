@@ -1240,6 +1240,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/nutrition/food-labels/",
+    "language": "en",
+    "pair_id": "DD-069",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/etiquetas/",
+    "language": "es",
+    "pair_id": "DD-069",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/nutrition/switching-food/",
     "language": "en",
     "pair_id": "DD-070",
@@ -1273,6 +1293,26 @@
     "page_path": "/es/alimentacion/premios/",
     "language": "es",
     "pair_id": "DD-071",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/grain-free-and-heart-health/",
+    "language": "en",
+    "pair_id": "DD-072",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/sin-cereales-y-salud-cardiaca/",
+    "language": "es",
+    "pair_id": "DD-072",
     "topic_cluster": "nutrition",
     "template_type": "health",
     "published": true,
