@@ -1080,6 +1080,46 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/living-with-dobermans/other-dogs-and-cats/",
+    "language": "en",
+    "pair_id": "DD-090",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/perros-y-gatos/",
+    "language": "es",
+    "pair_id": "DD-090",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/apartments/",
+    "language": "en",
+    "pair_id": "DD-091",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/apartamentos/",
+    "language": "es",
+    "pair_id": "DD-091",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/living-with-dobermans/home-safety/",
     "language": "en",
     "pair_id": "DD-092",
@@ -1173,6 +1213,26 @@
     "page_path": "/es/adopcion-y-criadores/pruebas-de-salud/",
     "language": "es",
     "pair_id": "DD-099",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/rescue-transition/",
+    "language": "en",
+    "pair_id": "DD-101",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/adaptacion-del-adoptado/",
+    "language": "es",
+    "pair_id": "DD-101",
     "topic_cluster": "adoption",
     "template_type": "guide",
     "published": true,
