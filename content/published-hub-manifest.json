@@ -260,6 +260,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/tools/",
+    "language": "en",
+    "pair_id": "DD-014",
+    "topic_cluster": "tools",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/",
+    "language": "es",
+    "pair_id": "DD-014",
+    "topic_cluster": "tools",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/",
     "language": "en",
     "pair_id": "DD-015",
@@ -1793,6 +1813,46 @@
     "page_path": "/es/herramientas/lista-cachorro/",
     "language": "es",
     "pair_id": "DD-116",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/tools/training-log/",
+    "language": "en",
+    "pair_id": "DD-117",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/registro-adiestramiento/",
+    "language": "es",
+    "pair_id": "DD-117",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/tools/care-calendar/",
+    "language": "en",
+    "pair_id": "DD-118",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/calendario-cuidados/",
+    "language": "es",
+    "pair_id": "DD-118",
     "topic_cluster": "tools",
     "template_type": "tool",
     "published": true,
