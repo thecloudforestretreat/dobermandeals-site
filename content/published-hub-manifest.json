@@ -1040,6 +1040,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/health/von-willebrand-disease/",
+    "language": "en",
+    "pair_id": "DD-056",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/enfermedad-de-von-willebrand/",
+    "language": "es",
+    "pair_id": "DD-056",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/wobbler-syndrome/",
+    "language": "en",
+    "pair_id": "DD-057",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/sindrome-de-wobbler/",
+    "language": "es",
+    "pair_id": "DD-057",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/hypothyroidism/",
+    "language": "en",
+    "pair_id": "DD-058",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/hipotiroidismo/",
+    "language": "es",
+    "pair_id": "DD-058",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/health/bloat-emergency/",
     "language": "en",
     "pair_id": "DD-059",
