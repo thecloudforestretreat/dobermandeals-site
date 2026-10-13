@@ -1140,6 +1140,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/grooming/ear-care/",
+    "language": "en",
+    "pair_id": "DD-078",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/oidos/",
+    "language": "es",
+    "pair_id": "DD-078",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/grooming/dental-care/",
+    "language": "en",
+    "pair_id": "DD-079",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/dientes/",
+    "language": "es",
+    "pair_id": "DD-079",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/grooming/paw-care/",
+    "language": "en",
+    "pair_id": "DD-080",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/patas/",
+    "language": "es",
+    "pair_id": "DD-080",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/grooming/care-schedule/",
     "language": "en",
     "pair_id": "DD-081",
