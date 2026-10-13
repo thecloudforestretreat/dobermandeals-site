@@ -640,6 +640,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/training/adolescent-training/",
+    "language": "en",
+    "pair_id": "DD-043",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/adolescencia/",
+    "language": "es",
+    "pair_id": "DD-043",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/training/choosing-a-trainer/",
     "language": "en",
     "pair_id": "DD-044",
@@ -700,6 +720,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/behavior/barking/",
+    "language": "en",
+    "pair_id": "DD-048",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/ladridos/",
+    "language": "es",
+    "pair_id": "DD-048",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/behavior/body-language/",
     "language": "en",
     "pair_id": "DD-050",
@@ -713,6 +753,26 @@
     "page_path": "/es/comportamiento/lenguaje-corporal/",
     "language": "es",
     "pair_id": "DD-050",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/behavior/destructive-chewing/",
+    "language": "en",
+    "pair_id": "DD-052",
+    "topic_cluster": "behavior",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comportamiento/masticacion-destructiva/",
+    "language": "es",
+    "pair_id": "DD-052",
     "topic_cluster": "behavior",
     "template_type": "guide",
     "published": true,
