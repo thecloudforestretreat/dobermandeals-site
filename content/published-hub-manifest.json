@@ -320,6 +320,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/doberman/size-and-growth/",
+    "language": "en",
+    "pair_id": "DD-019",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/tamano-y-crecimiento/",
+    "language": "es",
+    "pair_id": "DD-019",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/colors-and-coat/",
+    "language": "en",
+    "pair_id": "DD-020",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/colores-y-pelaje/",
+    "language": "es",
+    "pair_id": "DD-020",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/doberman/european-vs-american/",
+    "language": "en",
+    "pair_id": "DD-021",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/europeo-vs-americano/",
+    "language": "es",
+    "pair_id": "DD-021",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/doberman/lifespan/",
     "language": "en",
     "pair_id": "DD-024",
