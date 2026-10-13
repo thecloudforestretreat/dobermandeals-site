@@ -1780,6 +1780,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/about/review-methodology/",
+    "language": "en",
+    "pair_id": "DD-123",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/metodologia-de-resenas/",
+    "language": "es",
+    "pair_id": "DD-123",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/contact/",
     "language": "en",
     "pair_id": "DD-124",
@@ -1860,6 +1880,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/about/corrections/",
+    "language": "en",
+    "pair_id": "DD-128",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/nosotros/correcciones/",
+    "language": "es",
+    "pair_id": "DD-128",
+    "topic_cluster": "trust",
+    "template_type": "trust",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/subscription-box/waitlist/",
     "language": "en",
     "pair_id": "DD-129",
@@ -1873,6 +1913,26 @@
     "page_path": "/es/caja-de-suscripcion/lista-de-espera/",
     "language": "es",
     "pair_id": "DD-129",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/subscription-box/frequently-asked-questions/",
+    "language": "en",
+    "pair_id": "DD-130",
+    "topic_cluster": "commerce",
+    "template_type": "commerce",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/caja-de-suscripcion/preguntas-frecuentes/",
+    "language": "es",
+    "pair_id": "DD-130",
     "topic_cluster": "commerce",
     "template_type": "commerce",
     "published": true,
