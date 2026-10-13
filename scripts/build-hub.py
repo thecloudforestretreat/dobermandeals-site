@@ -105,6 +105,8 @@ for row in selected:
   checks+='<section class="dd-owner-notes"><h2>'+notes_title+'</h2><p>'+notes_help+'</p>'+''.join('<label for="note-'+str(i)+'">'+H(item)+'</label><textarea id="note-'+str(i)+'" rows="2" maxlength="400"></textarea>' for i,item in enumerate(c.get('log_fields') or ([a+' — '+b for a,b in c['matrix']] if num==32 else c['checklist'])))+'</section>'
  if c.get('faq'):
   checks+='<section class="dd-guide-faq"><h2>'+('Common questions' if lang=='en' else 'Preguntas frecuentes')+'</h2>'+''.join('<details><summary>'+H(q)+'</summary><p>'+H(a)+'</p></details>' for q,a in c['faq'])+'</section>'
+ if num==72:
+  checks+='<section class="dd-decision-route"><h2>'+('Prepare the cardiac discussion' if lang=='en' else 'Prepara la conversación cardiaca')+'</h2><ul>'+''.join('<li><a href="'+link(f'DD-{n:03d}',lang)+'">'+H(en if lang=='en' else es)+'</a></li>' for n,en,es in [(54,'Understand DCM questions','Prepara preguntas sobre miocardiopatía'),(55,'Discuss cardiac screening','Consulta pruebas cardiacas'),(120,'Build your visit question list','Prepara tus preguntas veterinarias')])+'</ul></section>'
  if num==120:
   checks+='<section class="dd-question-builder"><h2>'+('Your selected questions' if lang=='en' else 'Tus preguntas seleccionadas')+'</h2><p data-question-empty>'+('Select questions above to build your list.' if lang=='en' else 'Selecciona preguntas para crear tu lista.')+'</p><ul data-question-list></ul><button type="button" class="dd-button" data-question-reset>'+('Clear selections' if lang=='en' else 'Borrar selecciones')+'</button></section>'
  if num==120:
