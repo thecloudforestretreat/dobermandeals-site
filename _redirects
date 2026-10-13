@@ -1,3 +1,4 @@
 https://www.dobermandeals.com/* https://dobermandeals.com/:splat 301
 /subscribe /subscription-box/waitlist/ 301
 /subscribe/ /subscription-box/waitlist/ 301
+/subscribe/* /subscription-box/waitlist/ 301

@@ -7,3 +7,5 @@ No product contents, price, launch date, shipping promise, reservation or paid o
 Emergency content starts with immediate professional-care guidance, has no decorative hero image, labels its checklist as advance preparation and excludes commercial recommendations from main-content related links. Clinical checklist and action diagram await veterinary signoff.
 
 Server checks cover invalid data/origin/language/consent/token, Turnstile hostname/action failures, storage failure, EN/ES persistence, staging isolation and verification outages. Central-config and build integration checks pass.
+
+Live verification: the existing managed widget now explicitly authorizes staging.dobermandeals.com alongside dobermandeals.com. Real EN and ES signups using reserved example.com test addresses received server-confirmed saves, with localized confirmations and cleared form/busy state. No challenge was manually solved.
