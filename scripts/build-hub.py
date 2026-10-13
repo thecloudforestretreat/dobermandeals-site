@@ -89,9 +89,9 @@ for row in selected:
  if c['checklist']:
   checks=f'<section class="dd-checklist" data-checklist><h2>{L["check"]}</h2><p>{L["checkhelp"]}</p>'+''.join(f'<label><input type="checkbox"> <span>{H(item)}</span></label>' for item in c['checklist'])+'<p class="dd-checklist-status" data-checklist-status role="status" aria-live="polite"></p></section>'
  if c['checklist']:
-  notes_title='Notes for your next step' if lang=='en' else 'Notas para tu próximo paso'
+  notes_title=('Your sleep observation log' if lang=='en' else 'Tu registro de observación del sueño') if num==32 else ('Notes for your next step' if lang=='en' else 'Notas para tu próximo paso')
   notes_help='Add a brief note beside each task, then print this guide. These notes stay in this page and are not saved or sent.' if lang=='en' else 'Añade una nota junto a cada tarea e imprime la guía. Las notas permanecen en esta página, sin guardarse ni enviarse.'
-  checks+='<section class="dd-owner-notes"><h2>'+notes_title+'</h2><p>'+notes_help+'</p>'+''.join('<label for="note-'+str(i)+'">'+H(item)+'</label><textarea id="note-'+str(i)+'" rows="2" maxlength="400"></textarea>' for i,item in enumerate(c['checklist']))+'</section>'
+  checks+='<section class="dd-owner-notes"><h2>'+notes_title+'</h2><p>'+notes_help+'</p>'+''.join('<label for="note-'+str(i)+'">'+H(item)+'</label><textarea id="note-'+str(i)+'" rows="2" maxlength="400"></textarea>' for i,item in enumerate([a+' — '+b for a,b in c['matrix']] if num==32 else c['checklist']))+'</section>'
  if c.get('faq'):
   checks+='<section class="dd-guide-faq"><h2>'+('Common questions' if lang=='en' else 'Preguntas frecuentes')+'</h2>'+''.join('<details><summary>'+H(q)+'</summary><p>'+H(a)+'</p></details>' for q,a in c['faq'])+'</section>'
  if num in (5,6,7,10,11,12):
