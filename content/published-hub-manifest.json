@@ -240,6 +240,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/community/",
+    "language": "en",
+    "pair_id": "DD-013",
+    "topic_cluster": "community",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/",
+    "language": "es",
+    "pair_id": "DD-013",
+    "topic_cluster": "community",
+    "template_type": "hub",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/",
     "language": "en",
     "pair_id": "DD-015",
@@ -1700,6 +1720,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/gear/durable-toys/",
+    "language": "en",
+    "pair_id": "DD-106",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/juguetes-resistentes/",
+    "language": "es",
+    "pair_id": "DD-106",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/gear/leashes-and-long-lines/",
     "language": "en",
     "pair_id": "DD-107",
@@ -1735,6 +1775,26 @@
     "pair_id": "DD-110",
     "topic_cluster": "gear",
     "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/tools/puppy-checklist/",
+    "language": "en",
+    "pair_id": "DD-116",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/lista-cachorro/",
+    "language": "es",
+    "pair_id": "DD-116",
+    "topic_cluster": "tools",
+    "template_type": "tool",
     "published": true,
     "delivery_environment": "staging",
     "editorial_release": "pending"
