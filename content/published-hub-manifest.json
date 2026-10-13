@@ -1220,6 +1220,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/adoption-and-breeders/puppy-scams/",
+    "language": "en",
+    "pair_id": "DD-100",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/estafas/",
+    "language": "es",
+    "pair_id": "DD-100",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/adoption-and-breeders/rescue-transition/",
     "language": "en",
     "pair_id": "DD-101",
@@ -1233,6 +1253,26 @@
     "page_path": "/es/adopcion-y-criadores/adaptacion-del-adoptado/",
     "language": "es",
     "pair_id": "DD-101",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/adoption-and-breeders/breeder-questions/",
+    "language": "en",
+    "pair_id": "DD-102",
+    "topic_cluster": "adoption",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adopcion-y-criadores/preguntas-al-criador/",
+    "language": "es",
+    "pair_id": "DD-102",
     "topic_cluster": "adoption",
     "template_type": "guide",
     "published": true,
@@ -1313,6 +1353,26 @@
     "page_path": "/es/equipamiento/correas/",
     "language": "es",
     "pair_id": "DD-107",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/grooming-kit/",
+    "language": "en",
+    "pair_id": "DD-110",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/kit-de-higiene/",
+    "language": "es",
+    "pair_id": "DD-110",
     "topic_cluster": "gear",
     "template_type": "comparison",
     "published": true,
