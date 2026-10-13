@@ -580,6 +580,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/training/settle-on-a-mat/",
+    "language": "en",
+    "pair_id": "DD-040",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/calmarse-en-su-cama/",
+    "language": "es",
+    "pair_id": "DD-040",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/leave-it-and-drop-it/",
+    "language": "en",
+    "pair_id": "DD-041",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/dejar-y-soltar/",
+    "language": "es",
+    "pair_id": "DD-041",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/training/polite-greetings/",
+    "language": "en",
+    "pair_id": "DD-042",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/saludos-tranquilos/",
+    "language": "es",
+    "pair_id": "DD-042",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/training/choosing-a-trainer/",
     "language": "en",
     "pair_id": "DD-044",
