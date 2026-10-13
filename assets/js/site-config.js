@@ -15,6 +15,9 @@
     internalLinks: { minimumContextualInlinks: 6, minimumContextualOutlinks: 6, countLanguageSwitcher: false, countGlobalNavigation: false },
     contact: {
       email: "dobermandeals3@gmail.com",
+      formEndpoint: "/api/contact",
+      turnstileSiteKey: "0x4AAAAAAFUoea6FuYPHMyRz",
+      paths: { en: "/about/contact/", es: "/es/nosotros/contacto/" },
       whatsapp: {
         enabled: false,
         phoneE164: "",

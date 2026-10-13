@@ -75,7 +75,7 @@
         var allowed = {
           select_content: ["content_type", "item_id"], related_content_click: ["target_pair_id", "source_pair_id"],
           checklist_download: ["resource_id"], tool_complete: ["tool_id"], directory_outbound: ["resource_id", "resource_category"],
-          affiliate_click: ["product_id", "partner_id"], waitlist_start: ["form_id"], generate_lead: ["form_id", "method", "lead_type"],
+          affiliate_click: ["product_id", "partner_id"], contact_start: ["form_id"], waitlist_start: ["form_id"], generate_lead: ["form_id", "method", "lead_type"],
           language_switch: ["from_language", "to_language"], form_error: ["form_id", "error_category"],
           outbound_click: ["link_domain"], subscribe_click: [], whatsapp_click: []
         };
