@@ -960,6 +960,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/grooming/care-schedule/",
+    "language": "en",
+    "pair_id": "DD-081",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/higiene/calendario/",
+    "language": "es",
+    "pair_id": "DD-081",
+    "topic_cluster": "grooming",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/exercise/daily-routine/",
     "language": "en",
     "pair_id": "DD-082",
@@ -993,6 +1013,46 @@
     "page_path": "/es/ejercicio/enriquecimiento-mental/",
     "language": "es",
     "pair_id": "DD-084",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/scent-games/",
+    "language": "en",
+    "pair_id": "DD-085",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/juegos-de-olfato/",
+    "language": "es",
+    "pair_id": "DD-085",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/rainy-day-activities/",
+    "language": "en",
+    "pair_id": "DD-086",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/actividades-en-casa/",
+    "language": "es",
+    "pair_id": "DD-086",
     "topic_cluster": "exercise",
     "template_type": "steps",
     "published": true,
