@@ -1060,6 +1060,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/nutrition/puppy-food/",
+    "language": "en",
+    "pair_id": "DD-067",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/alimento-para-cachorros/",
+    "language": "es",
+    "pair_id": "DD-067",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/nutrition/body-condition/",
     "language": "en",
     "pair_id": "DD-068",
@@ -1073,6 +1093,46 @@
     "page_path": "/es/alimentacion/condicion-corporal/",
     "language": "es",
     "pair_id": "DD-068",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/switching-food/",
+    "language": "en",
+    "pair_id": "DD-070",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/cambio-de-alimento/",
+    "language": "es",
+    "pair_id": "DD-070",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/treats-and-training/",
+    "language": "en",
+    "pair_id": "DD-071",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/premios/",
+    "language": "es",
+    "pair_id": "DD-071",
     "topic_cluster": "nutrition",
     "template_type": "health",
     "published": true,
@@ -1240,6 +1300,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/exercise/puppy-exercise/",
+    "language": "en",
+    "pair_id": "DD-083",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/ejercicio-del-cachorro/",
+    "language": "es",
+    "pair_id": "DD-083",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/exercise/mental-enrichment/",
     "language": "en",
     "pair_id": "DD-084",
@@ -1293,6 +1373,26 @@
     "page_path": "/es/ejercicio/actividades-en-casa/",
     "language": "es",
     "pair_id": "DD-086",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/heat-and-cold/",
+    "language": "en",
+    "pair_id": "DD-088",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/calor-y-frio/",
+    "language": "es",
+    "pair_id": "DD-088",
     "topic_cluster": "exercise",
     "template_type": "steps",
     "published": true,
@@ -1373,6 +1473,26 @@
     "page_path": "/es/vivir-con-doberman/seguridad-en-casa/",
     "language": "es",
     "pair_id": "DD-092",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/car-travel/",
+    "language": "en",
+    "pair_id": "DD-093",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/viajar-en-coche/",
+    "language": "es",
+    "pair_id": "DD-093",
     "topic_cluster": "living",
     "template_type": "guide",
     "published": true,
