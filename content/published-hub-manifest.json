@@ -1260,6 +1260,66 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/gear/crate-sizing/",
+    "language": "en",
+    "pair_id": "DD-104",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/tamano-de-jaula/",
+    "language": "es",
+    "pair_id": "DD-104",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/beds/",
+    "language": "en",
+    "pair_id": "DD-105",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/camas/",
+    "language": "es",
+    "pair_id": "DD-105",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/leashes-and-long-lines/",
+    "language": "en",
+    "pair_id": "DD-107",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/correas/",
+    "language": "es",
+    "pair_id": "DD-107",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/about/editorial-policy/",
     "language": "en",
     "pair_id": "DD-121",
