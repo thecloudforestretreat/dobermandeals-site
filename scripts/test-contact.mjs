@@ -14,5 +14,7 @@ try{
  globalThis.fetch=async()=>Response.json({success:true,hostname:'staging.dobermandeals.com',action:'waitlist'});assert.equal((await onRequestPost({request:request(),env})).status,400);
  globalThis.fetch=async()=>Response.json({success:true,hostname:'staging.dobermandeals.com',action:'contact'});
  assert.equal((await onRequestPost({request:request(),env:{...env,WAITLIST:{put:async()=>{throw Error('outage');}}}})).status,503);
+ const delivered=await onRequestPost({request:request(),env:{...env,CONTACT_NOTIFIER:{fetch:async()=>Response.json({ok:true})}}});assert.equal((await delivered.json()).code,'saved');
+ const failed=await onRequestPost({request:request(),env:{...env,CONTACT_NOTIFIER:{fetch:async()=>new Response('',{status:503})}}});assert.equal((await failed.json()).code,'saved_pending');
  console.log('Contact origin, validation, Turnstile hostname/action, storage, TTL and outage checks passed.');
 }finally{globalThis.fetch=original;}

@@ -19,7 +19,13 @@ export async function onRequestPost({request,env}){
   if(!verified.success||verified.hostname!==url.hostname||verified.action!=='contact')return reply(400,'security');
   const stage=url.hostname==='staging.dobermandeals.com';
   await env.WAITLIST.put((stage?'staging:contact:':'contact:')+crypto.randomUUID(),JSON.stringify({email,message,category:data.category,language:data.language,consent:true,submittedAt:new Date().toISOString()}),{expirationTtl:stage?86400:2592000});
-  return reply(200,'saved');
+  if(env.CONTACT_NOTIFIER){
+   try{
+    const delivery=await env.CONTACT_NOTIFIER.fetch(new Request('https://contact-notifier.internal/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,message,category:data.category,language:data.language,staging:stage})}));
+    if(!delivery.ok)return reply(200,'saved_pending');
+   }catch{return reply(200,'saved_pending');}
+  }
+  return reply(200,env.CONTACT_NOTIFIER?'saved':'saved_pending');
  }catch{return reply(503,'unavailable');}
 }
 export function onRequestGet(){return reply(405,'method');}

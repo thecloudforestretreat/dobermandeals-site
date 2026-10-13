@@ -1,0 +1,8 @@
+name = "dobermandeals-contact-notifier"
+main = "index.js"
+compatibility_date = "2026-10-13"
+workers_dev = false
+preview_urls = false
+[[send_email]]
+name = "CONTACT_EMAIL"
+destination_address = "dobermandeals3@gmail.com"
