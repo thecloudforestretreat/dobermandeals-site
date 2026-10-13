@@ -1,0 +1,4 @@
+Batch 23: DD-069 food labels and DD-072 grain-free diets/heart health, English and Spanish.
+222/260 pages (111/130 pairs), 85.4%; P1 116/116 and P2 106/106 built on staging. All remaining 38 pages are P3. Built does not mean professionally approved or production-published.
+Four pages fit 320px; checklist and FAQ controls passed. Purina US B415425 label facts checked: adult-maintenance feeding-test statement, 383 kcal/cup, 95 g/cup. Original factual annotations link manufacturer PDF; no package artwork reproduced. AAFCO and FDA primary guidance checked October 13, 2026. Cardiac screening and visit tool linked contextually.
+Native sitemap four rows updated and full readback verified; local mirrors synchronized. Nutrition/veterinary approval, approved explanatory visuals, label artwork permission if reproduced and native Spanish review pending. Evidence-first-web-copy applied; staging only.
