@@ -1,0 +1,3 @@
+Use an evidence-first editorial pass for subsequent website batches. Follow the approved sitemap brief; remove generic filler and repeated structural patterns without deleting useful safety meaning. Distinguish research from actual product use. Write natural Spanish with matching facts. Keep literal equipment terms such as harness. Vary section, checklist and FAQ counts according to the reader’s task. Record source gaps and pending reviews honestly.
+
+Inspired by https://github.com/petergyang/no-ai-slop. A reusable validated skill draft is delivered in the task workspace at outputs/doberman-editorial-skill/evidence-first-web-copy/SKILL.md; it is not globally installed.
