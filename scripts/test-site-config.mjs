@@ -3,12 +3,12 @@ import vm from 'node:vm';
 import { readFile, readdir } from 'node:fs/promises';
 const config=await readFile('assets/js/site-config.js','utf8');
 const head=await readFile('assets/js/head.js','utf8');
-function browser(host='dobermandeals.com',pathname='/',noindex=false) {
+function browser(host='dobermandeals.com',pathname='/',noindex=false,hubStyles=false) {
  const nodes=[],listeners={};
  const document={
   head:{querySelector(selector){return nodes.find(n=>selector.includes('"'+(n.href||n.src)+'"'))||null;},appendChild(n){nodes.push(n);}},
   createElement(type){return {type,setAttribute(k,v){this[k]=v;}};},
-  querySelector(){return noindex?{}:null;},
+  querySelector(selector){return selector.includes('robots')?(noindex?{}:null):(hubStyles?{}:null);},
   documentElement:{lang:'en',getAttribute(k){return {'data-pair-id':'DD-001','data-topic-cluster':'commerce','data-template-type':'coming-soon'}[k]||null;}},
   addEventListener(name,handler){listeners[name]=handler;}
  };
@@ -16,6 +16,9 @@ function browser(host='dobermandeals.com',pathname='/',noindex=false) {
  vm.runInContext(config,context);vm.runInContext(head,context);return {context,nodes,listeners};
 }
 const production=browser();const w=production.context.window;
+const inlineHome=browser('dobermandeals.com','/',false,true);
+assert.equal(inlineHome.nodes.filter(n=>/fonts\.google/.test(n.href||'')).length,0);
+assert.equal(inlineHome.nodes.filter(n=>/gtm\.js/.test(n.src||'')).length,1);
 assert.equal(w.DD_SITE_CONFIG.contact.whatsapp.enabled,false);
 assert.equal(w.DDContact.whatsappUrl('en'),null);
 assert.ok(Object.isFrozen(w.DD_SITE_CONFIG.contact.whatsapp));

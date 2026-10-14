@@ -46,6 +46,20 @@ for (const page of hubPages) {
   await mkdir(destination.slice(0, destination.lastIndexOf('/')), { recursive: true });
   await writeFile(destination, html);
 }
+// The two entry pages render immediately without five blocking CSS requests.
+// Keep the same stylesheet order; other routes retain shared cached CSS files.
+for (const pagePath of ['/', '/es/']) {
+  if (!hubPaths.has(pagePath)) continue;
+  const file = pagePath === '/' ? 'dist/index.html' : 'dist/es/index.html';
+  let html = await readFile(file, 'utf8');
+  const links = [...html.matchAll(/<link rel="stylesheet" href="(\/assets\/css\/[^"?]+)(?:\?[^"]*)?">/g)];
+  for (const [link, path] of links) {
+    const css = await readFile('dist' + path, 'utf8');
+    if (/<\/style/i.test(css)) throw new Error('Unsafe inline CSS content.');
+    html = html.replace(link, '<style data-dd-hub-styles>' + css + '</style>');
+  }
+  await writeFile(file, html);
+}
 // Every full HTML document gets the same public config before the analytics
 // bootstrap. Includes/fragments are not HTML documents and are left alone.
 async function configureDocuments(directory) {
@@ -55,7 +69,7 @@ async function configureDocuments(directory) {
     if (!entry.name.endsWith('.html')) continue;
     let html = await readFile(file, 'utf8');
     if (!/<head[\s>]/i.test(html)) continue;
-    const scripts = '<script src="/assets/js/site-config.js?v=20261014-launch1" defer></script>\n<script src="/assets/js/head.js?v=20261014-launch1" defer></script>\n';
+    const scripts = '<script src="/assets/js/site-config.js?v=20261014-launch2" defer></script>\n<script src="/assets/js/head.js?v=20261014-launch2" defer></script>\n';
     html = html.replace(/<script\b[^>]*\bsrc=["']\/assets\/js\/(?:site-config|head)\.js[^"']*["'][^>]*>\s*<\/script>\s*/gi, '');
     html = html.replace(/<\/head>/i, scripts + '</head>');
     await writeFile(file, html);

@@ -38,8 +38,8 @@
     return s;
   }
 
-  // Legacy landing-page fonts. The hub uses the shared system-font stack.
-  if (!document.querySelector('link[href^="/assets/css/hub-site.css"]')) {
+  // Hub styles provide self-hosted fonts, including the inlined home styles.
+  if (!document.querySelector('link[href^="/assets/css/hub-site.css"], style[data-dd-hub-styles]')) {
   addLink("preconnect", "https://fonts.googleapis.com");
   addLink("preconnect", "https://fonts.gstatic.com", { crossorigin: "" });
 
