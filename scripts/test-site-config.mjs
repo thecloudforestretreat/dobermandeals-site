@@ -46,3 +46,18 @@ async function checkDocuments(dir) {
 }
 await checkDocuments('dist');
 console.log('Central config, WhatsApp URL validation, analytics allowlist, duplicate prevention, staging/noindex isolation and all built HTML script ordering passed.');
+for (const [file,eventName,parameter,expected] of [
+ ['index.html','language_switch','to_language','es'],
+ ['index.html','related_content_click','target_pair_id',null],
+ ['community/private-dog-spaces/index.html','directory_outbound','resource_id','DD-113-1']
+]) {
+ const html=await readFile(file,'utf8');
+ const tag=html.match(new RegExp('<a\\b[^>]*data-analytics-event="'+eventName+'"[^>]*>'))?.[0];
+ assert(tag,'Missing rendered event marker: '+file+' '+eventName);
+ const attributes=Object.fromEntries([...tag.matchAll(/([a-z0-9-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
+ const link={href:new URL(attributes.href,'https://dobermandeals.com/').href,getAttribute:name=>attributes[name]||null};
+ production.listeners.click({target:{closest:()=>link}});
+ const actual=w.dataLayer.at(-1);assert.equal(actual[1],eventName);
+ assert(actual[2][parameter]);if(expected)assert.equal(actual[2][parameter],expected);
+}
+console.log('Rendered language, contextual and directory links emit their named events in mocked production; no live analytics sent.');
