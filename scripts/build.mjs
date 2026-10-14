@@ -47,7 +47,7 @@ async function configureDocuments(directory) {
     if (!entry.name.endsWith('.html')) continue;
     let html = await readFile(file, 'utf8');
     if (!/<head[\s>]/i.test(html)) continue;
-    const scripts = '<script src="/assets/js/site-config.js?v=20261012-batch28" defer></script>\n<script src="/assets/js/head.js?v=20261012-batch28" defer></script>\n';
+    const scripts = '<script src="/assets/js/site-config.js?v=20261012-batch29" defer></script>\n<script src="/assets/js/head.js?v=20261012-batch29" defer></script>\n';
     html = html.replace(/<script\b[^>]*\bsrc=["']\/assets\/js\/(?:site-config|head)\.js[^"']*["'][^>]*>\s*<\/script>\s*/gi, '');
     html = html.replace(/<\/head>/i, scripts + '</head>');
     await writeFile(file, html);

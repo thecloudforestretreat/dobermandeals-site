@@ -1280,6 +1280,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/health/pet-insurance/",
+    "language": "en",
+    "pair_id": "DD-065",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/seguro-veterinario/",
+    "language": "es",
+    "pair_id": "DD-065",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/nutrition/feeding-guide/",
     "language": "en",
     "pair_id": "DD-066",
@@ -2213,6 +2233,46 @@
     "page_path": "/es/comunidad/clubes-y-deportes/",
     "language": "es",
     "pair_id": "DD-112",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/community/private-dog-spaces/",
+    "language": "en",
+    "pair_id": "DD-113",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/espacios-privados/",
+    "language": "es",
+    "pair_id": "DD-113",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/community/submit-a-resource/",
+    "language": "en",
+    "pair_id": "DD-115",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/enviar-recurso/",
+    "language": "es",
+    "pair_id": "DD-115",
     "topic_cluster": "community",
     "template_type": "directory",
     "published": true,
