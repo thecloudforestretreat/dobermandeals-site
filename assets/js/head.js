@@ -80,7 +80,7 @@
           outbound_click: ["link_domain"], subscribe_click: [], whatsapp_click: []
         };
         if (!Object.prototype.hasOwnProperty.call(allowed, eventName)) return;
-        var safe = Object.assign({}, context);
+        var safe = Object.assign({ send_to: analytics.ga4MeasurementId }, context);
         allowed[eventName].forEach(function (key) {
           var value = parameters && parameters[key];
           // Only short controlled identifiers; never email, token, free text or full URL.
