@@ -3,7 +3,7 @@ COPY=json.loads(r'''{
   "DD-073": {
     "en": {
       "title": "Raw diets: nutrition and household risks",
-      "intro": "Review nutritional adequacy and exposure risks before changing your Doberman’s food. Veterinary guidance does not establish a health advantage for raw diets over balanced cooked options.",
+      "intro": "Compare nutrition and household exposure before changing food. Veterinary guidance does not show a health advantage for raw diets over balanced cooked options.",
       "sections": [
         [
           "What the evidence says",
@@ -80,7 +80,7 @@ COPY=json.loads(r'''{
     },
     "es": {
       "title": "Dietas crudas: nutrición y riesgos en el hogar",
-      "intro": "Valora la adecuación nutricional y los riesgos de exposición antes de cambiar la comida de tu dóberman. La orientación veterinaria no demuestra una ventaja sobre opciones cocinadas equilibradas.",
+      "intro": "Valora nutrición y exposición en el hogar antes de cambiar la comida. La orientación veterinaria no demuestra ventajas frente a opciones cocinadas equilibradas.",
       "sections": [
         [
           "Qué indica la evidencia",
@@ -159,7 +159,7 @@ COPY=json.loads(r'''{
   "DD-074": {
     "en": {
       "title": "Supplements: assess the claim before adding a product",
-      "intro": "Bring the exact label and your dog’s full food and medication list to the veterinarian. A supplement’s name or marketing claim cannot establish a benefit for your Doberman.",
+      "intro": "Bring the label and your dog’s food and medication list to the veterinarian. A supplement’s name or marketing claim does not establish a benefit for your Doberman.",
       "sections": [
         [
           "Start with the reason for using it",
@@ -238,7 +238,7 @@ COPY=json.loads(r'''{
     },
     "es": {
       "title": "Suplementos: valora la promesa antes de añadirlos",
-      "intro": "Lleva al veterinario la etiqueta exacta y la lista completa de alimentos y medicamentos. El nombre o la publicidad de un suplemento no demuestra un beneficio para tu dóberman.",
+      "intro": "Lleva al veterinario la etiqueta y la lista de alimentos y medicamentos. El nombre o la publicidad de un suplemento no demuestra un beneficio para tu dóberman.",
       "sections": [
         [
           "Empieza por el motivo de uso",
@@ -319,7 +319,7 @@ COPY=json.loads(r'''{
   "DD-087": {
     "en": {
       "title": "Dog sports: compare a first step for your Doberman",
-      "intro": "Compare the activity, class environment and entry rules before enrolling. Your dog’s comfort, health and learning needs matter alongside an organizer’s eligibility requirements.",
+      "intro": "Compare activities, class settings and entry rules. Consider your dog’s comfort, health and learning needs alongside the organizer’s eligibility requirements.",
       "sections": [
         [
           "Compare Rally and agility",
