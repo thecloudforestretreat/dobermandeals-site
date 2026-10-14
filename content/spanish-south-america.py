@@ -14,6 +14,8 @@ def localize(text):
   (r'\bun transportín\b','una jaula de transporte'),
   (r'\btransportín\b','jaula de transporte'),
   (r'\badiestramiento\b','entrenamiento'),
+  (r'\bapúntate\b','inscríbete'),
+  (r'\bos ayudan\b','te ayudan'),
   (r'\bcoches\b','vehículos'),(r'\bcoche\b','vehículo'),
   (r'\bcuencos\b','recipientes'),(r'\bcuenco\b','recipiente'),
   (r'\buna carencia\b','un periodo de espera'),

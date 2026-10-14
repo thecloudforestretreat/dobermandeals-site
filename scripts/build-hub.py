@@ -106,7 +106,14 @@ for row in selected:
  k=row['pair_id'];num=int(k[-3:]);lang=row['language'];L=LABELS[lang];c=COPY[k][lang];t=c['title'];intro=c['intro'];
  if num in (13,14,22,25,45,56,57,58,60,61,62,64,65,69,72,73,74,87,94,96,106,108,109,111,112,113,114,115,116,117,118,119,120,123,128,130): L={**L,'updated':'Updated October 13, 2026' if lang=='en' else 'Actualizado el 13 de octubre de 2026'}
  url=ORIGIN+row['page_path'];other=ORIGIN+row['counterpart_path'];is_hub=row['template_type']=='hub';is_trust=row['topic_cluster']=='trust';img=image_for(row)
- desc=intro if len(intro)<=170 else intro[:167].rsplit(' ',1)[0]+'.'
+ sentences=re.split(r'(?<=[.!?])\s+',intro)
+ desc=intro
+ if len(intro)>170:
+  complete=[]
+  for sentence in sentences:
+   if len(' '.join(complete+[sentence]))>170:break
+   complete.append(sentence)
+  desc=' '.join(complete) if complete else intro[:167].rsplit(' ',1)[0].rstrip(' .;:,')+'.'
  bread=f'<nav class="dd-breadcrumb" aria-label="{"Breadcrumb" if lang=="en" else "Ruta de navegación"}"> <a href="{link("DD-001",lang)}">{L["home"]}</a><span aria-hidden="true">/</span><span>{H(t)}</span></nav>' if num!=1 else ''
  sections=''.join(f'<section id="section-{i+1}"><h2>{H(h)}</h2><p>{H(p)}</p>'+(' <p class="dd-section-sources">'+('Read the evidence: ' if lang=='en' else 'Consulta la fuente: ')+' · '.join('<a href="'+H(u)+'">'+H(label)+'</a>' for label,u in c['section_sources'][i])+'</p>' if i in c.get('section_sources',{}) else '')+'</section>' for i,(h,p) in enumerate(c['sections']))
  source_html=''
