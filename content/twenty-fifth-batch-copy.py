@@ -261,3 +261,14 @@ COPY = {'DD-045': {'en': {'title': 'Start training your newly adopted Doberman',
                               ('Ruta de reglas UDC',
                                'Utiliza la página oficial de manuales y comprueba el evento por separado.')],
                    'asset_title': 'Rutas oficiales para comparar'}}}
+
+for language in ('en','es'):
+    COPY['DD-111'][language]['resource_cards'] = [
+        ('Saving Dobermankind', 'Colorado, USA' if language=='en' else 'Colorado, EE. UU.', 'https://www.savingdobermankind.org/contact', '2026-10-13'),
+        ('Dobie Ranch Rescue', 'Crystal River, Florida, USA' if language=='en' else 'Crystal River, Florida, EE. UU.', 'https://www.dobieranchrescue.com/', '2026-10-13'),
+        ('DPCA Rescue Directory', 'United States directory portal' if language=='en' else 'Directorio de Estados Unidos', 'https://rescue.dpca.org/rescue-directory/', '2026-10-13')
+    ]
+    COPY['DD-112'][language]['resource_cards'] = [
+        ('DPCA chapter clubs', 'United States regional club contacts' if language=='en' else 'Contactos regionales de Estados Unidos', 'https://dpca.org/club/chapter-clubs/', '2026-10-13'),
+        ('United Doberman Club', 'US-oriented; national and international affiliations' if language=='en' else 'Orientado a EE. UU.; afiliaciones nacionales e internacionales', 'https://uniteddobermanclub.com/contact-us/', '2026-10-13')
+    ]
