@@ -496,3 +496,7 @@ COPY=json.loads(r'''{
   }
 }''')
 SOURCES=json.loads(r'''{"73":[["WSAVA: raw diets","https://wsava.org/wp-content/uploads/2021/04/Raw-Meat-Based-Diets-for-Pets_WSAVA-Global-Nutrition-Toolkit.pdf"],["FDA: food handling","https://www.fda.gov/animal-veterinary/animal-health-literacy/tips-safe-handling-pet-food-and-treats"]],"74":[["AAHA: treatment history","https://www.aaha.org/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats/evaluating-the-healthy-senior-pet/"],["Tufts: supplements in heart patients","https://vet.tufts.edu/foster-hospital-small-animals/specialty-services/cardiology/heartsmart/heart-disease-nutrition"]],"87":[["AKC: Rally and regulations","https://www.akc.org/sports/rally/"],["AKC: agility and regulations","https://www.akc.org/sports/agility/getting-started/"]]}''')
+
+for variants in COPY.values():
+ for page in variants.values():
+  page['section_sources']={int(i):refs for i,refs in page['section_sources'].items()}
