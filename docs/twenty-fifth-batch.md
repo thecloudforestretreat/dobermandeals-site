@@ -1,0 +1,4 @@
+Batch 25: DD-045 rescue training foundations, DD-111 rescue directory, DD-112 clubs/sports resources; English and Spanish.
+234/260 pages (117/130 pairs), exactly 90%; P3 12/38, with 26 pages remaining.
+234 current-release staging URLs passed metadata and six contextual links each direction. All six new pages fit 320px; official dated resource cards, checklist and FAQ controls verified. Dogs Trust, DPCA, Saving Dobermankind, Dobie Ranch and UDC official sources checked October 13, 2026. No endorsement, current dog availability, event place or universal eligibility claimed. Dobie Ranch current service area requires direct confirmation.
+Native sitemap six rows updated and full readback verified; local mirrors synchronized. Training demonstration media, trainer/editor and native Spanish approvals pending. Evidence-first-web-copy applied; staging only.
