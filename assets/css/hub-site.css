@@ -44,4 +44,4 @@ body{font-family:var(--dd-font);background:#fff}h1,h2{font-family:var(--dd-displ
 
 .dd-coat-colors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.dd-coat-colors>div{border:1px solid #6C757D;border-radius:8px;overflow:hidden}.dd-coat-colors span{display:block;height:90px}.dd-coat-colors strong{display:block;padding:.75rem}
 
-.dd-responsive-picture{display:contents}
+.dd-responsive-picture{display:block;min-width:0}.dd-hub-hero>.dd-responsive-picture{height:100%;overflow:hidden}

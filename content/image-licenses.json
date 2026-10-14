@@ -11,7 +11,7 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Doberman_Pinscher.jpg/960px-Doberman_Pinscher.jpg",
     "width": 960,
     "height": 1706,
-    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "changes": "Resized and encoded as AVIF/WebP for web delivery; source photograph and attribution retained.",
     "web_variants": [
       {
         "width": 480,
@@ -45,7 +45,7 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Obi_portrait_dobermann.jpg/960px-Obi_portrait_dobermann.jpg",
     "width": 960,
     "height": 638,
-    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "changes": "Resized and encoded as AVIF/WebP for web delivery; source photograph and attribution retained.",
     "web_variants": [
       {
         "width": 480,
@@ -78,7 +78,7 @@
     "local_path": "/assets/images/hub/doberman-outdoors.jpg",
     "width": 886,
     "height": 738,
-    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "changes": "Resized and encoded as AVIF/WebP for web delivery; source photograph and attribution retained.",
     "web_variants": [
       {
         "width": 480,
