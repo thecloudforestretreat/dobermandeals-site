@@ -2260,6 +2260,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/community/owner-stories/",
+    "language": "en",
+    "pair_id": "DD-114",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/historias/",
+    "language": "es",
+    "pair_id": "DD-114",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/community/submit-a-resource/",
     "language": "en",
     "pair_id": "DD-115",
