@@ -229,5 +229,5 @@ for row in selected:
  manifest.append({k:row[k] for k in ['page_path','language','pair_id','topic_cluster','template_type']}|{'published':True,'delivery_environment':'staging','editorial_release':'pending'})
 (R/'content/published-hub-manifest.json').write_text(json.dumps(manifest,indent=2))
 (R/'content/first-batch-link-graph.json').write_text(json.dumps({k:sorted(v) for k,v in edges.items()},indent=2))
-(R/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+ORIGIN+r['page_path']+'</loc><lastmod>2026-10-12</lastmod></url>' for r in selected)+'</urlset>')
+(R/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+''.join('<url><loc>'+ORIGIN+r['page_path']+'</loc>'+''.join('<xhtml:link rel="alternate" hreflang="'+locale+'" href="'+ORIGIN+by[(r['pair_id'],locale)]['page_path']+'"/>' for locale in ('en','es'))+'<xhtml:link rel="alternate" hreflang="x-default" href="'+ORIGIN+by[(r['pair_id'],'en')]['page_path']+'"/></url>' for r in selected)+'</urlset>')
 print('Rendered',len(selected),'pages /',len(COPY),'pairs; production editorial release remains pending.')

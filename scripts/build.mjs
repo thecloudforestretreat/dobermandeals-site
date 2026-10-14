@@ -5,7 +5,15 @@ if (process.env.CF_PAGES_BRANCH === 'main') {
     if (error.code === 'ENOENT') return '[]';
     throw error;
   }));
-  if (manifest.some(page => page.published && page.editorial_release !== 'approved')) {
+  const release = JSON.parse(await readFile('content/production-release.json', 'utf8').catch(error => {
+    if (error.code === 'ENOENT') return 'null';
+    throw error;
+  }));
+  const ownerAuthorized = release?.authorization === 'owner_authorized' &&
+    release?.origin === 'https://dobermandeals.com' &&
+    Array.isArray(release?.page_paths) &&
+    manifest.filter(page => page.published).every(page => release.page_paths.includes(page.page_path));
+  if (!ownerAuthorized && manifest.some(page => page.published && page.editorial_release !== 'approved')) {
     throw new Error('Hub content requires editorial release approval before a production build.');
   }
 }
