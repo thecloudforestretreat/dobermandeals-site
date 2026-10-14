@@ -1,0 +1,4 @@
+Batch 24: DD-094 boarding/sitters, DD-096 travel checklist, DD-108 cold-weather coats; English and Spanish.
+228/260 pages (114/130 pairs), 87.7%; P3 6/38, with 32 pages remaining. P1/P2 built status unchanged, professional approvals still pending.
+228 deployed current-release URLs passed metadata and six contextual links each direction. All six new pages fit 320px; checklist and FAQ controls verified. GOV.UK England scope, USDA APHIS travel guidance, RSPCA winter care and Ruffwear manufacturer specifications checked October 13, 2026. Coat example fictional, research-only; no hands-on tests or extreme-weather guarantee. Travel guide is not an itinerary approval or entry permit.
+Native sitemap six rows updated and full readback verified; local mirrors synchronized. Editor, relevant specialist/legal market verification and native Spanish review pending. Evidence-first-web-copy applied; staging only.
