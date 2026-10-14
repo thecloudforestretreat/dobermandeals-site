@@ -1,0 +1,13 @@
+# Batch 27 — staging only
+
+October 13, 2026: DD-025 ear cropping/tail docking, DD-060 hip dysplasia and DD-062 color dilution alopecia, in English and Spanish. Progress: 246/260 locale pages, 123/130 pairs (94.6%). P1 116/116, P2 106/106, P3 24/38. Fourteen locale pages remain.
+
+Cloudflare Pages deployment 894e125 succeeded. All 246 deployed URLs passed HTTP 200, language, single H1, canonical, noindex, JSON-LD parsing, at least six contextual same-language inlinks/outlinks and staging Google tracking exclusion. Local build, hub integration, site-config isolation and localized footer checks passed. All six new pages fit 320px without horizontal overflow and retain sticky headers. English and Spanish checklist counts and FAQ expansion passed, private notes reset on reload, and the mobile menu opens and closes with Escape. Evidence: project research outputs twenty-seventh-batch-staging-audit.json, batch27-browser-checks.json and batch27-hip-guide-desktop.png.
+
+New optional section_sources adds escaped, adjacent primary-source links to relevant sections. Existing pages retain their existing structure. No CSS or analytics event changes, no new photo assets, no invented medical credentials. Existing licensed breed portrait retained. Sources checked October 13: ACVS canine hip dysplasia, VCA color dilution alopecia, Merck owner guidance on hair loss (updated May 2025), WSAVA 2024 cosmetic alteration announcement, and AAHA cropping/docking position (revised June 2021). Claims are attributed to those sources; no jurisdiction-specific legal conclusion, surgical DIY steps, drug doses or diagnostic calculator.
+
+Evidence-first-web-copy applied: observed changes are separated from diagnosis; clinical choices remain individualized; examples are labeled hypothetical; Spanish preserves the same safety meaning with full sentences. Editorial approach began Batch 18; installed skill applies Batch 19 onward. No retrospective review claim.
+
+The authoritative Google sitemap received 42 content-cell updates across six rows with full readback equality; CSV/JSON mirrors synchronized. Existing fixed column widths retained. Only these rows’ title, description, H1 and question cells were set to wrap at the top after native inspection showed clipping. Status remains built_staging_not_live, with veterinary/editor/native Spanish reviews pending. Health pages contain draft checklists and explanatory matrices; required clinical approval and reviewer-approved explanatory visuals remain pending. No production promotion.
+
+Remaining pairs: DD-065 insurance, DD-073 raw diets, DD-074 supplements, DD-087 dog sports, DD-113 private dog spaces, DD-114 owner stories, DD-115 submit a resource. Owner stories need real submissions and consent.
