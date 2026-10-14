@@ -1420,6 +1420,46 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/nutrition/raw-diets/",
+    "language": "en",
+    "pair_id": "DD-073",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/dietas-crudas/",
+    "language": "es",
+    "pair_id": "DD-073",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/nutrition/supplements/",
+    "language": "en",
+    "pair_id": "DD-074",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/alimentacion/suplementos/",
+    "language": "es",
+    "pair_id": "DD-074",
+    "topic_cluster": "nutrition",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/grooming/bathing/",
     "language": "en",
     "pair_id": "DD-075",
@@ -1653,6 +1693,26 @@
     "page_path": "/es/ejercicio/actividades-en-casa/",
     "language": "es",
     "pair_id": "DD-086",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/exercise/dog-sports/",
+    "language": "en",
+    "pair_id": "DD-087",
+    "topic_cluster": "exercise",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/ejercicio/deportes-caninos/",
+    "language": "es",
+    "pair_id": "DD-087",
     "topic_cluster": "exercise",
     "template_type": "steps",
     "published": true,
