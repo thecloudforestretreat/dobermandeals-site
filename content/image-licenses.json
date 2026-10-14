@@ -11,7 +11,27 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Doberman_Pinscher.jpg/960px-Doberman_Pinscher.jpg",
     "width": 960,
     "height": 1706,
-    "changes": "Wikimedia resized derivative; displayed with a layout crop"
+    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "web_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/puppy-480.webp"
+      },
+      {
+        "width": 960,
+        "path": "/assets/images/hub/puppy-960.webp"
+      }
+    ],
+    "avif_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/puppy-480.avif"
+      },
+      {
+        "width": 960,
+        "path": "/assets/images/hub/puppy-960.avif"
+      }
+    ]
   },
   {
     "title": "File:Obi portrait dobermann.jpg",
@@ -25,7 +45,27 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Obi_portrait_dobermann.jpg/960px-Obi_portrait_dobermann.jpg",
     "width": 960,
     "height": 638,
-    "changes": "Wikimedia resized derivative; displayed with a layout crop"
+    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "web_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/doberman-portrait-480.webp"
+      },
+      {
+        "width": 960,
+        "path": "/assets/images/hub/doberman-portrait-960.webp"
+      }
+    ],
+    "avif_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/doberman-portrait-480.avif"
+      },
+      {
+        "width": 960,
+        "path": "/assets/images/hub/doberman-portrait-960.avif"
+      }
+    ]
   },
   {
     "title": "File:Doberman with tail.jpg",
@@ -38,6 +78,26 @@
     "local_path": "/assets/images/hub/doberman-outdoors.jpg",
     "width": 886,
     "height": 738,
-    "changes": "Displayed with a layout crop"
+    "changes": "Resized and encoded as WebP for web delivery; source photograph and attribution retained.",
+    "web_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/doberman-outdoors-480.webp"
+      },
+      {
+        "width": 886,
+        "path": "/assets/images/hub/doberman-outdoors-886.webp"
+      }
+    ],
+    "avif_variants": [
+      {
+        "width": 480,
+        "path": "/assets/images/hub/doberman-outdoors-480.avif"
+      },
+      {
+        "width": 886,
+        "path": "/assets/images/hub/doberman-outdoors-886.avif"
+      }
+    ]
   }
 ]
