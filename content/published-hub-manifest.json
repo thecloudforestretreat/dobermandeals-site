@@ -480,6 +480,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/doberman/ear-cropping-and-tail-docking/",
+    "language": "en",
+    "pair_id": "DD-025",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/corte-de-orejas-y-cola/",
+    "language": "es",
+    "pair_id": "DD-025",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/puppies/first-week-home/",
     "language": "en",
     "pair_id": "DD-026",
@@ -1160,6 +1180,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/health/hip-dysplasia/",
+    "language": "en",
+    "pair_id": "DD-060",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/displasia-de-cadera/",
+    "language": "es",
+    "pair_id": "DD-060",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/health/skin-and-coat-problems/",
     "language": "en",
     "pair_id": "DD-061",
@@ -1173,6 +1213,26 @@
     "page_path": "/es/salud/problemas-de-piel/",
     "language": "es",
     "pair_id": "DD-061",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/health/color-dilution-alopecia/",
+    "language": "en",
+    "pair_id": "DD-062",
+    "topic_cluster": "health",
+    "template_type": "health",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/salud/alopecia-por-dilucion/",
+    "language": "es",
+    "pair_id": "DD-062",
     "topic_cluster": "health",
     "template_type": "health",
     "published": true,
