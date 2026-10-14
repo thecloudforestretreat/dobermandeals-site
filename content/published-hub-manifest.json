@@ -840,6 +840,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/training/rescue-dog-foundations/",
+    "language": "en",
+    "pair_id": "DD-045",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/adiestramiento/bases-para-adoptados/",
+    "language": "es",
+    "pair_id": "DD-045",
+    "topic_cluster": "training",
+    "template_type": "steps",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/behavior/separation-distress/",
     "language": "en",
     "pair_id": "DD-046",
@@ -1995,6 +2015,46 @@
     "pair_id": "DD-110",
     "topic_cluster": "gear",
     "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/community/rescue-directory/",
+    "language": "en",
+    "pair_id": "DD-111",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/directorio-protectoras/",
+    "language": "es",
+    "pair_id": "DD-111",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/community/clubs-and-sports/",
+    "language": "en",
+    "pair_id": "DD-112",
+    "topic_cluster": "community",
+    "template_type": "directory",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/comunidad/clubes-y-deportes/",
+    "language": "es",
+    "pair_id": "DD-112",
+    "topic_cluster": "community",
+    "template_type": "directory",
     "published": true,
     "delivery_environment": "staging",
     "editorial_release": "pending"
