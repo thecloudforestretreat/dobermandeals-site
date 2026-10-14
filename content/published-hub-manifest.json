@@ -420,6 +420,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/doberman/male-vs-female/",
+    "language": "en",
+    "pair_id": "DD-022",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/doberman/macho-vs-hembra/",
+    "language": "es",
+    "pair_id": "DD-022",
+    "topic_cluster": "breed",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/doberman/history-and-breed-standard/",
     "language": "en",
     "pair_id": "DD-023",
@@ -2000,6 +2020,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/gear/car-restraints/",
+    "language": "en",
+    "pair_id": "DD-109",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/sujecion-en-coche/",
+    "language": "es",
+    "pair_id": "DD-109",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/gear/grooming-kit/",
     "language": "en",
     "pair_id": "DD-110",
@@ -2113,6 +2153,26 @@
     "page_path": "/es/herramientas/calendario-cuidados/",
     "language": "es",
     "pair_id": "DD-118",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/tools/ownership-budget/",
+    "language": "en",
+    "pair_id": "DD-119",
+    "topic_cluster": "tools",
+    "template_type": "tool",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/herramientas/presupuesto/",
+    "language": "es",
+    "pair_id": "DD-119",
     "topic_cluster": "tools",
     "template_type": "tool",
     "published": true,
