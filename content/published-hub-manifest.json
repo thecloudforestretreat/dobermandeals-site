@@ -1680,6 +1680,26 @@
     "editorial_release": "pending"
   },
   {
+    "page_path": "/living-with-dobermans/boarding-and-pet-sitters/",
+    "language": "en",
+    "pair_id": "DD-094",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/residencias-y-cuidadores/",
+    "language": "es",
+    "pair_id": "DD-094",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
     "page_path": "/living-with-dobermans/cost-of-ownership/",
     "language": "en",
     "pair_id": "DD-095",
@@ -1693,6 +1713,26 @@
     "page_path": "/es/vivir-con-doberman/coste-de-mantenimiento/",
     "language": "es",
     "pair_id": "DD-095",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/living-with-dobermans/travel-checklist/",
+    "language": "en",
+    "pair_id": "DD-096",
+    "topic_cluster": "living",
+    "template_type": "guide",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/vivir-con-doberman/lista-de-viaje/",
+    "language": "es",
+    "pair_id": "DD-096",
     "topic_cluster": "living",
     "template_type": "guide",
     "published": true,
@@ -1913,6 +1953,26 @@
     "page_path": "/es/equipamiento/correas/",
     "language": "es",
     "pair_id": "DD-107",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/gear/cold-weather-coats/",
+    "language": "en",
+    "pair_id": "DD-108",
+    "topic_cluster": "gear",
+    "template_type": "comparison",
+    "published": true,
+    "delivery_environment": "staging",
+    "editorial_release": "pending"
+  },
+  {
+    "page_path": "/es/equipamiento/abrigos/",
+    "language": "es",
+    "pair_id": "DD-108",
     "topic_cluster": "gear",
     "template_type": "comparison",
     "published": true,
