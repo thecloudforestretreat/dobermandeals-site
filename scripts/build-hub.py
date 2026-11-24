@@ -96,6 +96,10 @@ def footer(lang):
  explore=''.join(f'<a href="{link(k,lang)}">{L[n]}</a>' for k,n in [('DD-002','basics'),('DD-003','puppies'),('DD-004','training'),('DD-008','grooming'),('DD-009','exercise'),('DD-010','living'),('DD-011','adoption'),('DD-012','gear'),('DD-005','behavior'),('DD-006','health'),('DD-007','nutrition'),('DD-016','commerce')])
  return f'<footer class="dd-footer"><div class="dd-container">{band}<div class="dd-footer-top"><div class="dd-footer-brand"><a class="dd-wordmark" href="{link("DD-001",lang)}"><img src="/assets/images/dd_logo_128.png" alt="" width="64" height="64"><span class="dd-brand-name">Doberman<span>Deals</span></span></a><p>{L["footer"]}</p><div class="dd-socials" aria-label="{follow}">{social}</div></div><div><h3>{"Explore & learn" if lang=="en" else "Explora y aprende"}</h3><div class="dd-footer-links">{explore}<a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></div></div><div><h3>{"About & policies" if lang=="en" else "Nosotros y políticas"}</h3><div class="dd-footer-links">{ls}</div></div></div><div class="dd-footer-bottom"><span>© 2026 Doberman Deals</span><span>{"For the love of Dobermans." if lang=="en" else "Por el amor a los dóberman."}</span></div></div></footer>'
 
+def guide_link(pair, lang, en, es):
+ label=en if lang=='en' else es
+ return f'<p><a class="dd-button dd-button-secondary" href="{link(pair,lang)}" data-analytics-event="related_content_click" data-target-pair-id="{pair}">{H(label)}</a></p>'
+
 def related(row):
  lang=row['language'];k=row['pair_id'];L=LABELS[lang];items=[]
  for other in sorted(edges[k],key=lambda x:(by[(x,lang)]['topic_cluster']=='trust',int(x[-3:]))):
@@ -104,6 +108,7 @@ def related(row):
 manifest=[]
 for row in selected:
  k=row['pair_id'];num=int(k[-3:]);lang=row['language'];L=LABELS[lang];c=COPY[k][lang];t=c['title'];intro=c['intro'];
+ if num in (17,26,43): L={**L,'updated':'Updated November 24, 2026' if lang=='en' else 'Actualizado el 24 de noviembre de 2026'}
  if num in (13,14,22,25,45,56,57,58,60,61,62,64,65,69,72,73,74,87,94,96,106,108,109,111,112,113,114,115,116,117,118,119,120,123,128,130): L={**L,'updated':'Updated October 13, 2026' if lang=='en' else 'Actualizado el 13 de octubre de 2026'}
  url=ORIGIN+row['page_path'];other=ORIGIN+row['counterpart_path'];is_hub=row['template_type']=='hub';is_trust=row['topic_cluster']=='trust';img=image_for(row)
  sentences=re.split(r'(?<=[.!?])\s+',intro)
@@ -204,7 +209,8 @@ for row in selected:
   card_credits='<div class="dd-photo-credit">'+('Photography: ' if lang=='en' else 'Fotografía: ')+ ' · '.join('<a href="'+H(x['source'])+'">'+html.unescape(re.sub('<[^>]+>','',x['author']))+'</a> (<a href="'+H(x['license_url'])+'">'+H(x['license'])+'</a>)' for x in {image_for(by[(i,lang)])['local_path']:image_for(by[(i,lang)]) for i in featured}.values())+'</div>'
   topics='<nav class="dd-topic-strip" aria-label="'+('Explore topics' if lang=='en' else 'Explora los temas')+'">'+''.join(f'<a href="{link(i,lang)}">{LABELS[lang][n]}</a>' for i,n in [('DD-002','basics'),('DD-003','puppies'),('DD-004','training'),('DD-008','grooming'),('DD-009','exercise'),('DD-010','living'),('DD-011','adoption'),('DD-012','gear'),('DD-005','behavior'),('DD-006','health'),('DD-007','nutrition'),('DD-016','commerce')])+'</nav>'
 
-  content=hero+topics+f'<section class="dd-section"><div class="dd-home-label"><h2>{"A useful place to begin" if lang=="en" else "Un buen punto de partida"}</h2></div><div class="dd-grid">{cards}</div>{card_credits}</section><div class="dd-hub-story">{sections}{checks}{source_html}</div>'+related(row)
+  puppy_link=guide_link('DD-116',lang,'Open the puppy checklist','Abre la lista para tu cachorro') if num==1 else ''
+  content=hero+topics+f'<section class="dd-section"><div class="dd-home-label"><h2>{"A useful place to begin" if lang=="en" else "Un buen punto de partida"}</h2></div><div class="dd-grid">{cards}</div>{card_credits}{puppy_link}</section><div class="dd-hub-story">{sections}{checks}{source_html}</div>'+related(row)
  else:
   head=f'<header class="dd-article-header"><p class="dd-kicker">{topic_label(row)}</p><h1>{H(t)}</h1><p class="dd-lead">{H(intro)}</p><p class="dd-byline">{L["author"]} · {L["updated"]}</p></header>'
   visual='' if is_trust or num in (59,129) else '<figure class="dd-article-visual">'+img_html(img,lang)+credit(img,lang)+'</figure>'
@@ -217,8 +223,14 @@ for row in selected:
    start=checks.index('<section class="dd-signup">');end=checks.index('</section>',start)+len('</section>');signup=checks[start:end];checks=signup+checks[:start]+checks[end:]
   if num==16:head+='<p><a class="dd-button" href="'+link('DD-129',lang)+'">'+('Join launch updates' if lang=='en' else 'Recibe novedades del lanzamiento')+'</a></p>'
   reading=sections+resource_form(lang)+checks if num==115 else contact_form(lang)+sections+checks if num==124 else checks+sections if num in (16,129) else sections+checks
+  if num==26:
+   reading=guide_link('DD-116',lang,'Open the puppy checklist','Abre la lista para tu cachorro')+reading
+  if num==43:
+   reading+=guide_link('DD-038',lang,'Practice recall','Practica la llamada')
+  if num==17:
+   reading+=guide_link('DD-034',lang,'Start reward-based training','Empieza el entrenamiento con recompensas')
   content=head+visual+'<div class="dd-article-layout"><article class="dd-prose">'+reading+source_html+related(row)+'</article>'+toc+'</div>'
- schemas=[{'@context':'https://schema.org','@type':'Organization','@id':ORIGIN+'/#organization','name':'Doberman Deals','url':ORIGIN,'email':'dobermandeals3@gmail.com','sameAs':[x['url'] for x in BRAND['socials'] if x['name']!='Google Reviews']},{'@context':'https://schema.org','@type':'WebPage' if is_hub or is_trust or row['topic_cluster']=='commerce' else 'Article','@id':url+'#page','url':url,'name':t,'headline':t,'description':desc,'inLanguage':lang,'dateModified':'2026-10-13' if num in (13,14,22,25,45,56,57,58,60,61,62,64,65,69,72,73,74,87,94,96,106,108,109,111,112,113,114,115,116,117,118,119,120,123,128,130) else '2026-10-12','publisher':{'@id':ORIGIN+'/#organization'}}]
+ schemas=[{'@context':'https://schema.org','@type':'Organization','@id':ORIGIN+'/#organization','name':'Doberman Deals','url':ORIGIN,'email':'dobermandeals3@gmail.com','sameAs':[x['url'] for x in BRAND['socials'] if x['name']!='Google Reviews']},{'@context':'https://schema.org','@type':'WebPage' if is_hub or is_trust or row['topic_cluster']=='commerce' else 'Article','@id':url+'#page','url':url,'name':t,'headline':t,'description':desc,'inLanguage':lang,'dateModified':'2026-11-24' if num in (1,17,26,43) else '2026-10-13' if num in (13,14,22,25,45,56,57,58,60,61,62,64,65,69,72,73,74,87,94,96,106,108,109,111,112,113,114,115,116,117,118,119,120,123,128,130) else '2026-10-12','publisher':{'@id':ORIGIN+'/#organization'}}]
  if num==1:schemas.append({'@context':'https://schema.org','@type':'WebSite','name':'Doberman Deals','url':ORIGIN,'inLanguage':['en','es']})
  else:schemas.append({'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':L['home'],'item':ORIGIN+link('DD-001',lang)},{'@type':'ListItem','position':2,'name':t,'item':url}]})
  enurl=url if lang=='en' else other;esurl=url if lang=='es' else other
